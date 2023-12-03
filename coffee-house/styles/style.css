@@ -55,6 +55,25 @@ a:hover::after {
     height: 60px;
 }
 
+.header__menu-icon {
+    /*display: none;*/
+    width: 44px;
+    height: 44px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border-radius: 100px;
+    border: 1px solid #665F55;
+}
+
+.menu-icon__burger {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
 .header__container {
     display: flex;
     align-items: center;
@@ -577,4 +596,3 @@ a:hover::after {
 .contact-icon {
     margin-right: 8px;
 }
-

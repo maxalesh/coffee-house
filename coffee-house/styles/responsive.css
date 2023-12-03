@@ -1,0 +1,39 @@
+@media (max-width: 768px) {
+    .wrapper {
+        max-width: 688px;
+    }
+
+    .header__nav {
+        display: none;
+    }
+
+    .header__coffee-menu {
+        display: none;
+    }
+
+    .main-block__offer {
+        margin: 100px 60px;
+    }
+
+    .offer__button {
+        padding: 20px 64px;
+    }
+
+    .offer__button-icon {
+        opacity: 1;
+    }
+
+    .button__text {
+        left: 0;
+    }
+
+    .header__menu-icon {
+        display: flex;
+    }
+}
+
+@media (max-width: 380px) {
+    .wrapper {
+        max-width: 348px;
+    }
+}
