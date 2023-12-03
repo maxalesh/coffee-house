@@ -1,0 +1,33 @@
+body {
+    /*margin: 0;*/
+    overflow-x: hidden;
+    width: 100%;
+}
+
+:where(ul, ol):where([class]) {
+    padding-left: 0;
+}
+
+:where(
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  ul,
+  ol
+):where([class]) {
+    margin-block: 0;
+}
+
+:where(ul[class]) {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
