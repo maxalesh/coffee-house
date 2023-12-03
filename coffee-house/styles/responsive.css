@@ -30,6 +30,46 @@
     .header__menu-icon {
         display: flex;
     }
+
+    .coffee-slider__title {
+        width: auto;
+        font-size: 60px;
+        line-height: 125%;
+        text-align: center;
+    }
+
+    .coffee-slider {
+        margin: 38px 0;
+    }
+
+    .gallery__photo-box-2 {
+        display: none;
+    }
+
+    .gallery {
+        flex-direction: column;
+    }
+
+    .gallery__photo-box-1 {
+        width: auto;
+    }
+
+    .about__content {
+        margin-bottom: 45px;
+    }
+
+    .mobile-app,
+    .footer-container {
+        flex-direction: column;
+    }
+
+    .footer__left-block, .footer__right-block {
+        width: 100%;
+    }
+
+    .footer-container {
+        padding: 100px 60px;
+    }
 }
 
 @media (max-width: 380px) {
