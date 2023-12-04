@@ -10,7 +10,7 @@
 /*}*/
 
 .menu-page__title {
-    font-size: 60px;
+    font-size: 6rem;
     line-height: 1.25;
     color: #403F3D;
     width: fit-content;
@@ -105,6 +105,9 @@
     flex-wrap: wrap;
     gap: 40px;
     animation: showMenu 450ms ease-in-out;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
 }
 
 @keyframes showMenu {

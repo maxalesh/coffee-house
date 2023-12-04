@@ -1,3 +1,38 @@
+@media (min-width: 1441px) {
+    .wrapper {
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 1339px) {
+    .gallery__photo-box-2 {
+        display: none;
+    }
+
+    .gallery {
+        flex-direction: column;
+    }
+
+    .gallery__photo-box-1 {
+        width: auto;
+        margin: 0 auto;
+    }
+
+    .gallery__photo {
+        scale: none;
+    }
+
+    .screens__photo {
+        object-fit: cover;
+        width: 100%;
+    }
+
+    .mobile-app__screens,
+    .mobile-app__offer {
+        flex: 1 1 0;
+    }
+}
+
 @media (max-width: 768px) {
     .wrapper {
         max-width: 688px;
@@ -16,7 +51,7 @@
     }
 
     .offer__button {
-        padding: 20px 64px;
+        padding: 20px 78px;
     }
 
     .offer__button-icon {
@@ -52,6 +87,7 @@
 
     .gallery__photo-box-1 {
         width: auto;
+        margin: inherit;
     }
 
     .about__content {
@@ -91,8 +127,11 @@
         transform: scale(0.9);
     }
 
-    .gallery__photo {
-        object-position: 12px;
+    /*.gallery__photo {*/
+    /*    object-position: 12px;*/
+    /*}*/
+    .gallery__photo-1, .gallery__photo-4 {
+        width: 688px;
     }
 
     /*MENU*/
@@ -113,9 +152,18 @@
     }
 }
 
-@media (max-width: 380px) {
+@media (max-width: 767.5px) {
+    .menu__coffee, .menu__tea, .menu__dessert {
+        flex-wrap: nowrap;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 700px) {
     .wrapper {
         max-width: 348px;
+        margin: 0 auto;
     }
 
     .offer-title {
@@ -124,7 +172,7 @@
     }
 
     .offer__button {
-        width: auto;
+        padding: 20px 78px;
     }
 
     .main-block__offer {
@@ -205,10 +253,24 @@
     }
 
     .footer__title {
-        font-size: 3.18em;
+        font-size: 3.18rem;
     }
 
     .contacts__info {
-        font-size: 1.6em;
+        font-size: 1.6rem;
+    }
+
+    /*MENU*/
+    .menu-page__title {
+        font-size: 3.2rem;
+    }
+
+    .tabs {
+        gap: 8px;
+    }
+
+    .menu__coffee, .menu__tea, .menu__dessert {
+        width: 310px;
+        margin: 0 auto;
     }
 }
