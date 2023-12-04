@@ -295,7 +295,7 @@ a:hover::after {
 }
 
 .coffee-card__title, .coffee-card__cost {
-    font-size: 24px;
+    font-size: 2.4em;
     line-height: 1.25;
 }
 
@@ -341,7 +341,7 @@ a:hover::after {
 }
 
 .about__title {
-    font-size: 59.5px;
+    font-size: 5.95em;
     line-height: 1.25;
 }
 
@@ -424,7 +424,7 @@ a:hover::after {
 }
 
 .mobile-app__title {
-    font-size: 59.5px;
+    font-size: 5.95em;
     line-height: 1.25;
 }
 
@@ -518,7 +518,7 @@ a:hover::after {
 }
 
 .footer__title {
-    font-size: 60px;
+    font-size: 6em;
     line-height: 1.25;
     color: #E1D4C9;
 }
@@ -568,7 +568,7 @@ a:hover::after {
 }
 
 .contacts__title {
-    font-size: 24px;
+    font-size: 2.4em;
     line-height: 1.25;
 }
 

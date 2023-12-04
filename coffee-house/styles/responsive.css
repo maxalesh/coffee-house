@@ -90,10 +90,104 @@
     .gallery__photo-box:hover {
         transform: scale(0.9);
     }
+
+    .gallery__photo {
+        object-position: 12px;
+    }
 }
 
 @media (max-width: 380px) {
     .wrapper {
         max-width: 348px;
+    }
+
+    .offer-title {
+        font-size: 4.2em;
+        line-height: 1.15;
+    }
+
+    .main-block__offer {
+        margin: 60px 16px;
+        width: fit-content;
+    }
+
+    .main-block__background {
+        height: auto;
+    }
+
+    .coffee-slider__title {
+        font-size: 3.2em;
+    }
+
+    .button-arrow {
+        display: none;
+    }
+
+    .coffee-picture {
+        width: 348px;
+        height: 348px;
+    }
+
+    .coffee-card__title, .coffee-card__cost {
+        width: auto;
+    }
+
+    .coffee-card__info {
+        width: auto;
+    }
+
+    .coffee-card__description {
+        font-size: 1.6em;
+    }
+
+    .about__title {
+        font-size: 3.2em;
+    }
+
+    .gallery__photo-1, .gallery__photo-4 {
+        width: auto;
+    }
+
+    .gallery__photo {
+        object-position: -100px;
+        scale: 1.25;
+    }
+
+    .mobile-app {
+        gap: 40px;
+    }
+
+    .mobile-app__title {
+        font-size: 3.2em;
+    }
+
+    .mobile-app__subtitle {
+        font-size: 1.6em;
+    }
+
+    .mobile-app__offer {
+        width: 100%;
+    }
+
+    .mobile-app__download {
+        flex-direction: column;
+    }
+
+    .screens__photo {
+        width: 348px;
+        height: 348px;
+    }
+
+    .footer-container {
+        padding: 60px 16px;
+        gap: 40px;
+    }
+
+    .footer__title {
+        font-size: 3.18em;
+    }
+
+    .contacts__info {
+        font-size: 1.6em;
     }
 }
