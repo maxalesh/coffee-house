@@ -39,7 +39,7 @@ a:hover::after {
 }
 
 .coffee-menu__link_current::after {
-    opacity: 1;
+    transform: scaleX(1);
 }
 
 
