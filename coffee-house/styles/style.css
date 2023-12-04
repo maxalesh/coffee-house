@@ -19,14 +19,14 @@ a {
 
 a::after {
     content: '';
-    opacity: 0;
-    transition: opacity 400ms;
+    transition: 400ms ease-out;
     position: absolute;
-    bottom: 0;
+    bottom: -4px;
     left: 0;
     width: 100%;
     height: 2px;
     background-color: #403F3D;
+    transform: scaleX(0);
 }
 
 .header__logo::after {
@@ -35,7 +35,7 @@ a::after {
 }
 
 a:hover::after {
-    opacity: 1;
+    transform: scaleX(1);
 }
 
 .coffee-menu__link_current::after {
@@ -45,7 +45,7 @@ a:hover::after {
 
 .wrapper {
     max-width: 1360px;
-    margin: 0 auto;
+    margin: 0 40px;
 }
 
 /*HEADER*/
@@ -53,6 +53,24 @@ a:hover::after {
 .logo__icon {
     width: 100px;
     height: 60px;
+}
+
+.header__menu-icon {
+    display: none;
+    width: 44px;
+    height: 44px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    border: 1px solid #665F55;
+}
+
+.menu-icon__burger {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
 }
 
 .header__container {
@@ -119,6 +137,7 @@ a:hover::after {
     border-radius: 40px;
     width: 100%;
     background: lightgray url("../images/img-hero.jpg") no-repeat center;
+    background-size: cover;
 }
 
 .main-block__offer {
@@ -161,6 +180,7 @@ a:hover::after {
     background-color: #E1D4C9;
     border-radius: 100px;
     border: 0;
+    width: 44px;
 }
 
 .offer__button:hover {
@@ -188,7 +208,7 @@ a:hover::after {
 }
 
 .offer__button:hover .button__text {
-    transform: translateX(-8px);
+    transform: translateX(-14px);
 }
 
 .button__text {
@@ -201,8 +221,8 @@ a:hover::after {
     justify-content: center;
     gap: 8px;
     margin: 0 auto;
-    width: 100%;
-    left: 8px;
+    /*width: 100%;*/
+    left: 14px;
     transition: transform 200ms;
     color: #403F3D;
 }
@@ -276,7 +296,7 @@ a:hover::after {
 }
 
 .coffee-card__title, .coffee-card__cost {
-    font-size: 24px;
+    font-size: 2.4em;
     line-height: 1.25;
 }
 
@@ -284,6 +304,7 @@ a:hover::after {
     font-weight: 400;
     line-height: 1.5;
     margin: 16px 0;
+    font-size: 1.6em;
 }
 
 .coffee-card__info {
@@ -322,7 +343,7 @@ a:hover::after {
 }
 
 .about__title {
-    font-size: 59.5px;
+    font-size: 5.95em;
     line-height: 1.25;
 }
 
@@ -405,12 +426,13 @@ a:hover::after {
 }
 
 .mobile-app__title {
-    font-size: 59.5px;
+    font-size: 5.95em;
     line-height: 1.25;
 }
 
 .mobile-app__subtitle {
     line-height: 1.5;
+    font-size: 1.6em;
 }
 
 .mobile-app__download {
@@ -499,7 +521,7 @@ a:hover::after {
 }
 
 .footer__title {
-    font-size: 60px;
+    font-size: 6rem;
     line-height: 1.25;
     color: #E1D4C9;
 }
@@ -549,7 +571,7 @@ a:hover::after {
 }
 
 .contacts__title {
-    font-size: 24px;
+    font-size: 2.4rem;
     line-height: 1.25;
 }
 
@@ -558,6 +580,7 @@ a:hover::after {
     display: flex;
     flex-direction: column;
     gap: 16px;
+    font-size: 1.6rem;
 }
 
 .contacts__item {
@@ -578,3 +601,66 @@ a:hover::after {
     margin-right: 8px;
 }
 
+/*d*/
+/*.underline-opening:after {*/
+/*    content: "";*/
+/*    width: 3px;*/
+/*    height: 3px;*/
+/*    bottom: 0;*/
+/*    left: 0;*/
+/*    right: 0;*/
+/*    margin: 0 auto;*/
+/*}*/
+
+/*.underline-opening:focus:after,*/
+/*.underline-opening:hover:after {*/
+/*    width: 100%;*/
+/*    height: 3px;*/
+/*}*/
+
+/*.underline-opening:before {*/
+/*    position: absolute;*/
+/*    content: "";*/
+/*    width: 3px;*/
+/*    height: 3px;*/
+/*    bottom: 0;*/
+/*    right: 0;*/
+/*    left: 0;*/
+/*    margin: 0 auto;*/
+/*}*/
+
+.underline-opening:focus:before,
+.underline-opening:hover:before {
+    width: 100%;
+    height: 3px;
+}
+
+/*.text-con {*/
+/*    position: relative;*/
+/*    top: 50%;*/
+/*    width: 100%;*/
+/*    text-align: center;*/
+/*}*/
+
+/*a:before {*/
+/*    content: '';*/
+/*    !*opacity: 0;*!*/
+/*    transition: 400ms;*/
+/*    position: absolute;*/
+/*    bottom: 0;*/
+/*    left: 0;*/
+/*    !*right: 0;*!*/
+/*    margin: 0 auto;*/
+/*    width: 100%;*/
+/*    height: 2px;*/
+/*    background-color: #403F3D;*/
+/*    transform: scaleX(0);*/
+/*}*/
+
+/*a:hover:before {*/
+/*    transform: scaleX(1);*/
+/*}*/
+
+/*a {*/
+/*    position: relative;*/
+/*}*/
