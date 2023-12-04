@@ -103,6 +103,14 @@
     .menu__refresh {
         display: flex !important;
     }
+
+    .menu-page__title br {
+        display: none;
+    }
+
+    .menu__coffee, .menu__tea, .menu__dessert {
+        padding: 0 14px;
+    }
 }
 
 @media (max-width: 380px) {

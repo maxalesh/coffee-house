@@ -521,7 +521,7 @@ a:hover::after {
 }
 
 .footer__title {
-    font-size: 6em;
+    font-size: 6rem;
     line-height: 1.25;
     color: #E1D4C9;
 }
@@ -571,7 +571,7 @@ a:hover::after {
 }
 
 .contacts__title {
-    font-size: 2.4em;
+    font-size: 2.4rem;
     line-height: 1.25;
 }
 
@@ -580,7 +580,7 @@ a:hover::after {
     display: flex;
     flex-direction: column;
     gap: 16px;
-    font-size: 1.6em;
+    font-size: 1.6rem;
 }
 
 .contacts__item {
