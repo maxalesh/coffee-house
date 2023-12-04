@@ -94,6 +94,15 @@
     .gallery__photo {
         object-position: 12px;
     }
+
+    /*MENU*/
+    .menu__cup-card:nth-child(n+5) {
+        display: none;
+    }
+
+    .menu__refresh {
+        display: flex !important;
+    }
 }
 
 @media (max-width: 380px) {
@@ -104,6 +113,10 @@
     .offer-title {
         font-size: 4.2em;
         line-height: 1.15;
+    }
+
+    .offer__button {
+        width: auto;
     }
 
     .main-block__offer {

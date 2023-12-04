@@ -306,5 +306,31 @@
     border-radius: 100px;
     background-color: #E1D4C9;
     border: 1px solid #403F3D;
+}
 
+.menu__refresh {
+    display: none;
+    border: none;
+    background: none;
+    margin: 0 auto;
+}
+
+.refresh__box {
+    display: flex;
+    width: 60px;
+    height: 60px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    border: 1px solid #665F55;
+    background-color: #E1D4C9;
+    transition: background-color 300ms;
+}
+
+.refresh__box:hover {
+    background-color: #665F55;
+}
+
+.menu__refresh:hover {
+    cursor: pointer;
 }

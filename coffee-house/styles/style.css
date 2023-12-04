@@ -180,6 +180,7 @@ a:hover::after {
     background-color: #E1D4C9;
     border-radius: 100px;
     border: 0;
+    width: 44px;
 }
 
 .offer__button:hover {
@@ -207,7 +208,7 @@ a:hover::after {
 }
 
 .offer__button:hover .button__text {
-    transform: translateX(-8px);
+    transform: translateX(-14px);
 }
 
 .button__text {
@@ -220,8 +221,8 @@ a:hover::after {
     justify-content: center;
     gap: 8px;
     margin: 0 auto;
-    width: 100%;
-    left: 8px;
+    /*width: 100%;*/
+    left: 14px;
     transition: transform 200ms;
     color: #403F3D;
 }
@@ -303,6 +304,7 @@ a:hover::after {
     font-weight: 400;
     line-height: 1.5;
     margin: 16px 0;
+    font-size: 1.6em;
 }
 
 .coffee-card__info {
@@ -430,6 +432,7 @@ a:hover::after {
 
 .mobile-app__subtitle {
     line-height: 1.5;
+    font-size: 1.6em;
 }
 
 .mobile-app__download {
@@ -577,6 +580,7 @@ a:hover::after {
     display: flex;
     flex-direction: column;
     gap: 16px;
+    font-size: 1.6em;
 }
 
 .contacts__item {
