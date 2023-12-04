@@ -39,13 +39,13 @@ a:hover::after {
 }
 
 .coffee-menu__link_current::after {
-    opacity: 1;
+    transform: scaleX(1);
 }
 
 
 .wrapper {
     max-width: 1360px;
-    margin: 0 40px;
+    margin: 0 auto;
 }
 
 /*HEADER*/
