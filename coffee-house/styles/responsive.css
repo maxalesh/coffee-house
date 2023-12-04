@@ -5,6 +5,10 @@
 }
 
 @media (max-width: 1339px) {
+    .wrapper {
+        margin: 0 40px;
+    }
+
     .gallery__photo-box-2 {
         display: none;
     }
@@ -149,6 +153,8 @@
 
     .menu__coffee, .menu__tea, .menu__dessert {
         padding: 0 14px;
+        flex-direction: column;
+        flex-wrap: nowrap;
     }
 }
 

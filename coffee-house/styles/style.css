@@ -45,7 +45,7 @@ a:hover::after {
 
 .wrapper {
     max-width: 1360px;
-    margin: 0 40px;
+    margin: 0 auto;
 }
 
 /*HEADER*/
