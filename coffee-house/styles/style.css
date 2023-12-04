@@ -56,12 +56,11 @@ a:hover::after {
 }
 
 .header__menu-icon {
-    /*display: none;*/
+    display: none;
     width: 44px;
     height: 44px;
     justify-content: center;
     align-items: center;
-    display: flex;
     border-radius: 100px;
     border: 1px solid #665F55;
 }
@@ -138,6 +137,7 @@ a:hover::after {
     border-radius: 40px;
     width: 100%;
     background: lightgray url("../images/img-hero.jpg") no-repeat center;
+    background-size: cover;
 }
 
 .main-block__offer {

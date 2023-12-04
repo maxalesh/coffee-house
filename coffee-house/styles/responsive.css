@@ -70,6 +70,26 @@
     .footer-container {
         padding: 100px 60px;
     }
+
+    .offer__button:hover .button__text {
+        transform: none;
+    }
+
+    .offer__button:hover .offer__button-icon {
+        animation: none;
+    }
+
+    .gallery__photo-box {
+        transition: transform 500ms;
+    }
+
+    .gallery__photo-box .gallery__photo:hover {
+        transform: none;
+    }
+
+    .gallery__photo-box:hover {
+        transform: scale(0.9);
+    }
 }
 
 @media (max-width: 380px) {
