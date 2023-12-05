@@ -423,6 +423,12 @@ a:hover::after {
     display: flex;
     gap: 40px;
     flex-direction: column;
+    width: 50%;
+}
+
+.mobile-app__screens {
+    display: flex;
+    width: 50%;
 }
 
 .mobile-app__title {
