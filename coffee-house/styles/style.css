@@ -49,6 +49,12 @@ a::after {
     height: 60px;
 }
 
+/*.burger__line {*/
+/*    width: 16px;*/
+/*    height: 2px;*/
+/*    background-color: #403F3D;*/
+/*}*/
+
 .header__menu-icon {
     display: none;
     width: 44px;
@@ -64,7 +70,7 @@ a::after {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 8px;
+    gap: 7px;
 }
 
 .header__container {
