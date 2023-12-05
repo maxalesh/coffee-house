@@ -151,9 +151,12 @@
         transform: none;
     }
 
-    .gallery__photo-box:hover {
-        transform: scale(0.9);
+    @media (hover: hover) {
+        .gallery__photo-box:hover {
+            transform: scale(0.9);
+        }
     }
+
 
     /*.gallery__photo {*/
     /*    object-position: 12px;*/

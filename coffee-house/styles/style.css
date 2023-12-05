@@ -3,9 +3,6 @@ html {
     scroll-behavior: smooth;
 }
 
-button:hover {
-    cursor: pointer;
-}
 
 body {
     font-family: Inter, serif;
@@ -34,9 +31,6 @@ a::after {
     display: none;
 }
 
-a:hover::after {
-    transform: scaleX(1);
-}
 
 .coffee-menu__link_current::after {
     transform: scaleX(1);
@@ -183,20 +177,11 @@ a:hover::after {
     width: 44px;
 }
 
-.offer__button:hover {
-    cursor: pointer;
-}
-
 
 .offer__button-icon {
     opacity: 0;
 }
 
-.offer__button:hover .offer__button-icon {
-    animation: show-coffee-cup 0.4s;
-    display: block;
-    opacity: 100%;
-}
 
 @keyframes show-coffee-cup {
     from {
@@ -207,9 +192,6 @@ a:hover::after {
     }
 }
 
-.offer__button:hover .button__text {
-    transform: translateX(-14px);
-}
 
 .button__text {
     font-family: Inter, serif;
@@ -250,17 +232,6 @@ a:hover::after {
     transition: all 500ms;
 }
 
-.button-arrow:hover path {
-    stroke: #E1D4C9;
-}
-
-
-.button-arrow:hover {
-    background-color: #665F55;
-    border-color: #665F55;
-    cursor: pointer;
-
-}
 
 .coffee-card:not(:first-child) {
     display: none;
@@ -377,10 +348,6 @@ a:hover::after {
     display: block;
 }
 
-.gallery__photo-box .gallery__photo:hover {
-    transform: scale(0.91);
-}
-
 
 .gallery__photo-box-1,
 .gallery__photo-box-2 {
@@ -446,10 +413,6 @@ a:hover::after {
     gap: 20px;
 }
 
-.mobile-app__appstore:hover,
-.mobile-app__google-play:hover {
-    cursor: pointer;
-}
 
 .appstore__btn,
 .google-play__btn {
@@ -463,19 +426,6 @@ a:hover::after {
     background-color: inherit;
     box-sizing: border-box;
     transition: all 500ms;
-}
-
-.google-play__btn:hover path,
-.appstore__btn:hover path {
-    fill: #E1D4C9;
-}
-
-.google-play__btn:hover,
-.appstore__btn:hover {
-    color: #E1D4C9;
-    border-color: #665F55;
-    background-color: #665F55;
-    transition: 500ms;
 }
 
 
@@ -546,15 +496,6 @@ a:hover::after {
     transition: all 500ms;
 }
 
-.socials__btn:hover .svg-path {
-    stroke: #403F3D;
-}
-
-.socials__btn:hover {
-    background-color: #E1D4C9;
-    cursor: pointer;
-    transition: 700ms;
-}
 
 .socials__logo {
     width: 24px;
@@ -598,75 +539,81 @@ a:hover::after {
     background-color: #E1D4C9;
 }
 
-.contacts__item a:hover::after {
-    background-color: #E1D4C9;
-    transition: 500ms;
-}
 
 .contact-icon {
     margin-right: 8px;
 }
 
-/*d*/
-/*.underline-opening:after {*/
-/*    content: "";*/
-/*    width: 3px;*/
-/*    height: 3px;*/
-/*    bottom: 0;*/
-/*    left: 0;*/
-/*    right: 0;*/
-/*    margin: 0 auto;*/
-/*}*/
+@media (hover: hover) {
+    button:hover {
+        cursor: pointer;
+    }
 
-/*.underline-opening:focus:after,*/
-/*.underline-opening:hover:after {*/
-/*    width: 100%;*/
-/*    height: 3px;*/
-/*}*/
+    a:hover::after {
+        transform: scaleX(1);
+    }
 
-/*.underline-opening:before {*/
-/*    position: absolute;*/
-/*    content: "";*/
-/*    width: 3px;*/
-/*    height: 3px;*/
-/*    bottom: 0;*/
-/*    right: 0;*/
-/*    left: 0;*/
-/*    margin: 0 auto;*/
-/*}*/
+    .offer__button:hover .offer__button-icon {
+        animation: show-coffee-cup 0.4s;
+        display: block;
+        opacity: 100%;
+    }
 
-.underline-opening:focus:before,
-.underline-opening:hover:before {
-    width: 100%;
-    height: 3px;
+    .offer__button:hover {
+        cursor: pointer;
+    }
+
+    .offer__button:hover .button__text {
+        transform: translateX(-14px);
+    }
+
+
+    .button-arrow:hover path {
+        stroke: #E1D4C9;
+    }
+
+    .button-arrow:hover {
+        background-color: #665F55;
+        border-color: #665F55;
+        cursor: pointer;
+    }
+
+    .gallery__photo-box .gallery__photo:hover {
+        transform: scale(0.91);
+    }
+
+
+    .mobile-app__appstore:hover,
+    .mobile-app__google-play:hover {
+        cursor: pointer;
+    }
+
+    .google-play__btn:hover path,
+    .appstore__btn:hover path {
+        fill: #E1D4C9;
+    }
+
+    .google-play__btn:hover,
+    .appstore__btn:hover {
+        color: #E1D4C9;
+        border-color: #665F55;
+        background-color: #665F55;
+        transition: 500ms;
+    }
+
+    .socials__btn:hover .svg-path {
+        stroke: #403F3D;
+    }
+
+    .socials__btn:hover {
+        background-color: #E1D4C9;
+        cursor: pointer;
+        transition: 700ms;
+    }
+
+    .contacts__item a:hover::after {
+        background-color: #E1D4C9;
+        transition: 500ms;
+    }
 }
 
-/*.text-con {*/
-/*    position: relative;*/
-/*    top: 50%;*/
-/*    width: 100%;*/
-/*    text-align: center;*/
-/*}*/
-
-/*a:before {*/
-/*    content: '';*/
-/*    !*opacity: 0;*!*/
-/*    transition: 400ms;*/
-/*    position: absolute;*/
-/*    bottom: 0;*/
-/*    left: 0;*/
-/*    !*right: 0;*!*/
-/*    margin: 0 auto;*/
-/*    width: 100%;*/
-/*    height: 2px;*/
-/*    background-color: #403F3D;*/
-/*    transform: scaleX(0);*/
-/*}*/
-
-/*a:hover:before {*/
-/*    transform: scaleX(1);*/
-/*}*/
-
-/*a {*/
-/*    position: relative;*/
-/*}*/

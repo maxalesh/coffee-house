@@ -47,33 +47,6 @@
 
 }
 
-.tab-coffee:hover {
-    cursor: default;
-}
-
-/*.button__name {*/
-/*    color: #403F3D;*/
-/*    font-size: 16px;*/
-/*    font-weight: 600;*/
-/*    line-height: 1.5;*/
-/*}*/
-
-.tabs__button.active,
-.tabs__button:hover {
-    background-color: #665F55;
-    border-color: #665F55;
-    animation: hover-tab 350ms;
-}
-
-.tabs__button:hover .button__icon,
-.tabs__button.active .button__icon {
-    background-color: #E1D4C9;
-}
-
-.active span,
-.tabs__button:hover .button__name {
-    color: #E1D4C9;
-}
 
 @keyframes hover-tab {
     from {
@@ -144,9 +117,6 @@
     border-radius: 40px;
 }
 
-.menu__cup-card:hover {
-    cursor: pointer;
-}
 
 .cup-card__info {
     display: flex;
@@ -187,9 +157,6 @@
     scale: 1.1;
 }
 
-.menu__cup-card:hover img {
-    transform: scale(0.95);
-}
 
 /*MODAL*/
 .modal {
@@ -330,10 +297,55 @@
     transition: background-color 300ms;
 }
 
-.refresh__box:hover {
-    background-color: #665F55;
+
+@media (hover: hover) {
+    .refresh__box:hover {
+        background-color: #665F55;
+    }
+
+    .menu__refresh:hover {
+        cursor: pointer;
+    }
+
+    .tab-coffee:hover {
+        cursor: default;
+    }
+
+    .tabs__button:hover {
+        background-color: #665F55;
+        border-color: #665F55;
+        animation: hover-tab 350ms;
+    }
+
+    .tabs__button:hover .button__icon {
+        background-color: #E1D4C9;
+    }
+
+
+    .tabs__button:hover .button__name {
+        color: #E1D4C9;
+    }
+
+    .menu__cup-card:hover {
+        cursor: pointer;
+    }
+
+
+    .menu__cup-card:hover img {
+        transform: scale(0.95);
+    }
 }
 
-.menu__refresh:hover {
-    cursor: pointer;
+.active span {
+    color: #E1D4C9;
+}
+
+.tabs__button.active .button__icon {
+    background-color: #E1D4C9;
+}
+
+.tabs__button.active {
+    background-color: #665F55;
+    border-color: #665F55;
+    animation: hover-tab 350ms;
 }
