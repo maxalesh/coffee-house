@@ -42,6 +42,7 @@ a::after {
     margin: 0 auto;
 }
 
+
 /*HEADER*/
 
 .logo__icon {
@@ -225,8 +226,9 @@ a::after {
 .coffee-slider__title {
     font-size: 60px;
     line-height: 125%;
-    width: max-content;
+    width: auto;
     margin: 0 auto;
+    text-align: center;
 }
 
 .button-arrow {
@@ -262,6 +264,7 @@ a::after {
     margin: 0 auto;
     width: 480px;
     height: 480px;
+    object-fit: cover;
 }
 
 .coffee-slider {
