@@ -1,5 +1,5 @@
 .menu-page__container {
-    font-family: Inter;
+    font-family: Inter, serif;
     font-size: 16px;
     font-weight: 600;
     line-height: 1.5;
@@ -12,7 +12,7 @@
 .menu-page__title {
     font-size: 6rem;
     line-height: 1.25;
-    color: #403F3D;
+    color: #403f3d;
     width: fit-content;
     margin: 0 auto 40px;
     text-align: center;
@@ -20,7 +20,7 @@
 
 .button__icon {
     border-radius: 100px;
-    background-color: #C1B6AD;
+    background-color: #c1b6ad;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -37,24 +37,22 @@
     padding: 8px 16px 8px 8px;
     align-items: center;
     background: inherit;
-    border: 1px solid #C1B6AD;
+    border: 1px solid #c1b6ad;
 
-    font-family: Inter;
-    color: #403F3D;
+    font-family: Inter, serif;
+    color: #403f3d;
     font-size: 16px;
     font-weight: 600;
     line-height: 1.5;
-
 }
-
 
 @keyframes hover-tab {
     from {
         background-color: unset;
     }
     to {
-        background-color: #665F55;
-        border-color: #665F55;
+        background-color: #665f55;
+        border-color: #665f55;
     }
 }
 
@@ -107,7 +105,7 @@
     width: 310px;
     height: 506px;
     border-radius: 40px;
-    border: 1px solid #C1B6AD;
+    border: 1px solid #c1b6ad;
     box-sizing: border-box;
 }
 
@@ -116,7 +114,6 @@
     height: 310px;
     border-radius: 40px;
 }
-
 
 .cup-card__info {
     display: flex;
@@ -157,7 +154,6 @@
     scale: 1.1;
 }
 
-
 /*MODAL*/
 .modal {
     display: none;
@@ -169,11 +165,10 @@
     transform: translate(-50%, -50%);
     padding: 16px;
 
-
     align-items: flex-start;
     align-self: stretch;
     z-index: 1000;
-    background-color: #E1D4C9;
+    background-color: #e1d4c9;
     border-radius: 40px;
     gap: 20px;
 }
@@ -209,7 +204,7 @@
     font-weight: 600;
     line-height: 1.5;
     flex: 1 1 0;
-    color: #403F3D;
+    color: #403f3d;
 }
 
 .modal__title {
@@ -233,12 +228,12 @@
 }
 
 .close__btn {
-    font-family: Inter;
+    font-family: Inter, serif;
     font-size: 16px;
     font-style: normal;
     font-weight: 600;
     line-height: 150%;
-    color: #403F3D;
+    color: #403f3d;
 }
 
 .additives__title,
@@ -274,8 +269,8 @@
     width: 100%;
     padding: 10px 78px;
     border-radius: 100px;
-    background-color: #E1D4C9;
-    border: 1px solid #403F3D;
+    background-color: #e1d4c9;
+    border: 1px solid #403f3d;
 }
 
 .menu__refresh {
@@ -292,15 +287,14 @@
     justify-content: center;
     align-items: center;
     border-radius: 100px;
-    border: 1px solid #665F55;
-    background-color: #E1D4C9;
+    border: 1px solid #665f55;
+    background-color: #e1d4c9;
     transition: background-color 300ms;
 }
 
-
 @media (hover: hover) {
     .refresh__box:hover {
-        background-color: #665F55;
+        background-color: #665f55;
     }
 
     .menu__refresh:hover {
@@ -312,24 +306,22 @@
     }
 
     .tabs__button:hover {
-        background-color: #665F55;
-        border-color: #665F55;
+        background-color: #665f55;
+        border-color: #665f55;
         animation: hover-tab 350ms;
     }
 
     .tabs__button:hover .button__icon {
-        background-color: #E1D4C9;
+        background-color: #e1d4c9;
     }
 
-
     .tabs__button:hover .button__name {
-        color: #E1D4C9;
+        color: #e1d4c9;
     }
 
     .menu__cup-card:hover {
         cursor: pointer;
     }
-
 
     .menu__cup-card:hover img {
         transform: scale(0.95);
@@ -337,15 +329,15 @@
 }
 
 .active span {
-    color: #E1D4C9;
+    color: #e1d4c9;
 }
 
 .tabs__button.active .button__icon {
-    background-color: #E1D4C9;
+    background-color: #e1d4c9;
 }
 
 .tabs__button.active {
-    background-color: #665F55;
-    border-color: #665F55;
+    background-color: #665f55;
+    border-color: #665f55;
     animation: hover-tab 350ms;
 }

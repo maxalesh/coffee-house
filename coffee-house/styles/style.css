@@ -1,8 +1,7 @@
 html {
-    background-color: #E1D4C9;
+    background-color: #e1d4c9;
     scroll-behavior: smooth;
 }
-
 
 body {
     font-family: Inter, serif;
@@ -15,33 +14,30 @@ a {
 }
 
 a::after {
-    content: '';
+    content: "";
     transition: 400ms ease-out;
     position: absolute;
     bottom: -4px;
     left: 0;
     width: 100%;
     height: 2px;
-    background-color: #403F3D;
+    background-color: #403f3d;
     transform: scaleX(0);
 }
 
 .header__logo::after {
-    content: '';
+    content: "";
     display: none;
 }
-
 
 .coffee-menu__link_current::after {
     transform: scaleX(1);
 }
 
-
 .wrapper {
     max-width: 1360px;
     margin: 0 auto;
 }
-
 
 /*HEADER*/
 
@@ -63,7 +59,7 @@ a::after {
     justify-content: center;
     align-items: center;
     border-radius: 100px;
-    border: 1px solid #665F55;
+    border: 1px solid #665f55;
 }
 
 .menu-icon__burger {
@@ -100,7 +96,6 @@ a::after {
     height: 20px;
 }
 
-
 .coffee-menu {
     display: flex;
     height: 28px;
@@ -114,7 +109,6 @@ a::after {
     align-items: center;
     gap: 4px;
 }
-
 
 .coffee-menu__link {
     display: flex;
@@ -148,7 +142,7 @@ a::after {
     justify-content: center;
     align-items: flex-start;
     gap: 40px;
-    color: #E1D4C9;
+    color: #e1d4c9;
     margin: 100px;
 }
 
@@ -162,7 +156,7 @@ a::after {
 }
 
 ._italic-beige {
-    color: #B0907A;
+    color: #b0907a;
     font-style: italic;
 }
 
@@ -178,17 +172,15 @@ a::after {
     justify-content: center;
     align-items: center;
     gap: 8px;
-    background-color: #E1D4C9;
+    background-color: #e1d4c9;
     border-radius: 100px;
     border: 0;
     width: 44px;
 }
 
-
 .offer__button-icon {
     opacity: 0;
 }
-
 
 @keyframes show-coffee-cup {
     from {
@@ -198,7 +190,6 @@ a::after {
         opacity: 100%;
     }
 }
-
 
 .button__text {
     font-family: Inter, serif;
@@ -213,9 +204,8 @@ a::after {
     /*width: 100%;*/
     left: 14px;
     transition: transform 200ms;
-    color: #403F3D;
+    color: #403f3d;
 }
-
 
 /*SLIDER*/
 
@@ -236,10 +226,9 @@ a::after {
     width: 60px;
     height: 60px;
     border: 1px solid black;
-    background-color: #E1D4C9;
+    background-color: #e1d4c9;
     transition: all 500ms;
 }
-
 
 .coffee-card:not(:first-child) {
     display: none;
@@ -275,7 +264,8 @@ a::after {
     margin: 40px 0;
 }
 
-.coffee-card__title, .coffee-card__cost {
+.coffee-card__title,
+.coffee-card__cost {
     font-size: 2.4em;
     line-height: 1.25;
 }
@@ -303,14 +293,14 @@ a::after {
 .controls__item {
     width: 38px;
     /*height: 4px;*/
-    border: 2px solid #C1B6AD;
+    border: 2px solid #c1b6ad;
     border-radius: 100px;
-    color: #C1B6AD;
+    color: #c1b6ad;
 }
 
 .controls__item-active {
-    border: 2px solid #665F55;
-    color: #665F55;
+    border: 2px solid #665f55;
+    color: #665f55;
 }
 
 /*ABOUT*/
@@ -339,11 +329,9 @@ a::after {
     flex-direction: column;
 }
 
-
 .gallery__photo-box {
     display: inline-block;
     overflow: hidden;
-
 }
 
 .gallery__photo {
@@ -356,7 +344,6 @@ a::after {
     transition: 400ms ease;
     display: block;
 }
-
 
 .gallery__photo-box-1,
 .gallery__photo-box-2 {
@@ -422,7 +409,6 @@ a::after {
     gap: 20px;
 }
 
-
 .appstore__btn,
 .google-play__btn {
     display: flex;
@@ -430,13 +416,12 @@ a::after {
     padding: 12px 20px;
     align-items: center;
     gap: 8px;
-    border: 1px solid #665F55;
+    border: 1px solid #665f55;
     border-radius: 100px;
     background-color: inherit;
     box-sizing: border-box;
     transition: all 500ms;
 }
-
 
 .appstore__text,
 .google-play__text {
@@ -482,13 +467,13 @@ a::after {
     gap: 100px;
     align-self: stretch;
     border-radius: 40px;
-    background-color: #665F55;
+    background-color: #665f55;
 }
 
 .footer__title {
     font-size: 6rem;
     line-height: 1.25;
-    color: #E1D4C9;
+    color: #e1d4c9;
 }
 
 .footer__socials {
@@ -500,11 +485,10 @@ a::after {
     width: 60px;
     height: 60px;
     border-radius: 100px;
-    border: 1px solid #C1B6AD;
+    border: 1px solid #c1b6ad;
     background-color: inherit;
     transition: all 500ms;
 }
-
 
 .socials__logo {
     width: 24px;
@@ -520,7 +504,7 @@ a::after {
 }
 
 .contacts {
-    color: #E1D4C9;
+    color: #e1d4c9;
     display: flex;
     flex-direction: column;
     gap: 40px;
@@ -545,9 +529,8 @@ a::after {
 }
 
 .contacts__item a::after {
-    background-color: #E1D4C9;
+    background-color: #e1d4c9;
 }
-
 
 .contact-icon {
     margin-right: 8px;
@@ -576,21 +559,19 @@ a::after {
         transform: translateX(-14px);
     }
 
-
     .button-arrow:hover path {
-        stroke: #E1D4C9;
+        stroke: #e1d4c9;
     }
 
     .button-arrow:hover {
-        background-color: #665F55;
-        border-color: #665F55;
+        background-color: #665f55;
+        border-color: #665f55;
         cursor: pointer;
     }
 
     .gallery__photo-box .gallery__photo:hover {
         transform: scale(0.91);
     }
-
 
     .mobile-app__appstore:hover,
     .mobile-app__google-play:hover {
@@ -599,30 +580,29 @@ a::after {
 
     .google-play__btn:hover path,
     .appstore__btn:hover path {
-        fill: #E1D4C9;
+        fill: #e1d4c9;
     }
 
     .google-play__btn:hover,
     .appstore__btn:hover {
-        color: #E1D4C9;
-        border-color: #665F55;
-        background-color: #665F55;
+        color: #e1d4c9;
+        border-color: #665f55;
+        background-color: #665f55;
         transition: 500ms;
     }
 
     .socials__btn:hover .svg-path {
-        stroke: #403F3D;
+        stroke: #403f3d;
     }
 
     .socials__btn:hover {
-        background-color: #E1D4C9;
+        background-color: #e1d4c9;
         cursor: pointer;
         transition: 700ms;
     }
 
     .contacts__item a:hover::after {
-        background-color: #E1D4C9;
+        background-color: #e1d4c9;
         transition: 500ms;
     }
 }
-
