@@ -31,29 +31,8 @@ const rangeSections = {
 let products;
 
 
-async function getJSON() {
-    let response = await fetch(jsonURL);
-    products = await response.json(); // читаем ответ в формате JSON
-//     console.log(products);
-}
 
 
-
-// let request = new XMLHttpRequest();
-// request.open("GET", jsonURL);
-// request.responseType = "json";
-// request.send();
-//
-//
-// if (request.status != 200) {
-//   console.log( request.status + ': ' + request.statusText + ' данные не пришли');
-// } else {
-//   console.log('ok')
-//   names = xhr.responseText;
-//   request.onload = function () {
-//       products = request.response;
-//   };
-// }
 
 tabCoffeeBtn.addEventListener("click", () => switchTabs(0));
 tabTeaBtn.addEventListener("click", () => switchTabs(1));
@@ -78,6 +57,7 @@ function switchTabs(cupInd = 0) {
     tabInd = cupInd;
     cupsCards.forEach((item, ind) => {
         if (ind === tabInd) {
+            showProducts(tabsBtn[ind].dataset.name)
             item.style.display = "flex";
             tabsBtn[ind].classList.add("active");
         } else {
@@ -169,12 +149,13 @@ modalWindow.innerHTML = `
 `;
 
 async function showProducts(section = "coffee") {
+    let menuSectionEl = document.querySelector(`.menu__${section}`);
+    menuSectionEl.innerHTML = '';
     let response = await fetch(jsonURL);
     products = await response.json(); // читаем ответ в формате JSON
     console.log(products);
     let startInd = rangeSections[section].start;
     let endInd = rangeSections[section].end;
-    let menuSectionEl = document.querySelector(`.menu__${section}`);
     for (let i = startInd; i <= endInd; i++) {
         const productCard = document.createElement("div");
         productCard.classList.add("menu__cup-card");
@@ -198,7 +179,6 @@ async function showProducts(section = "coffee") {
     }
 }
 
-showProducts();
 
 class MenuCard {
     constructor(props) { }
