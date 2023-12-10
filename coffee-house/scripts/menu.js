@@ -126,7 +126,7 @@ function openModal(i) {
                             </label>
 
 
-                            <input id="size-l" type="radio" name="size" value="${products[i].sizes.m["add-price"]}">
+                            <input id="size-l" type="radio" name="size" value="${products[i].sizes.l["add-price"]}">
                             <label for="size-l" class="size__btn tabs__button">
                                 <span class="size__btn-icon button__icon">L</span>
                                 <span class="button__name">${products[i].sizes.m.size}</span>
@@ -137,18 +137,23 @@ function openModal(i) {
                     <div class="modal__additives additives">
                         <h3 class="additives__title">Additives</h3>
                         <div class="additives__btn-box">
-                            <button class="additives__btn tabs__button">
+                              <input id="additives-1" type="checkbox" name="additives" value="${products[i].additives[0]["add-price"]}">
+                              <label for="additives-1" class="additives__btn tabs__button">
                                 <span class="additives__btn-icon button__icon">1</span>
                                 <span class="button__name">${products[i].additives[0].name}</span>
-                            </button>
-                            <button class="additives__btn tabs__button">
+                              </label>
+
+                            <input id="additives-2" type="checkbox" name="additives" value="${products[i].additives[1]["add-price"]}">
+                             <label for="additives-2" class="additives__btn tabs__button">
                                 <span class="additives__btn-icon button__icon">2</span>
                                 <span class="button__name">${products[i].additives[1].name}</span>
-                            </button>
-                            <button class="additives__btn tabs__button">
+                             </label>
+
+                            <input id="additives-3" type="checkbox" name="additives" value="${products[i].additives[2]["add-price"]}">
+                             <label for="additives-3" class="additives__btn tabs__button">
                                 <span class="additives__btn-icon button__icon">3</span>
                                 <span class="button__name">${products[i].additives[2].name}</span>
-                            </button>
+                             </label>
                         </div>
                     </div>
 
@@ -178,13 +183,17 @@ function openModal(i) {
     closeButton.addEventListener("click", () => closeModal());
 
     const sizesBtn = Array.from(document.querySelectorAll('.size__btn-box input'));
+    const additivesBtn = Array.from(document.querySelectorAll('.additives__btn-box'));
     sizesBtn.forEach((item) => item.addEventListener('click', () => getPriceProduct(i)));
+    additivesBtn.forEach((item) => item.addEventListener('click', () => getPriceProduct(i)));
 }
 
 function getPriceProduct(index) {
     let costValue = document.querySelector('.cost__value');
     const sizeChecked = +document.querySelector('input[name="size"]:checked').value;
-    costValue.innerText = String((+products[index].price + sizeChecked).toFixed(2));
+    const additivesCheckedCount = Array.from(document.querySelectorAll('input[name="additives"]:checked')).length;
+//     console.log(additivesChecked)
+    costValue.innerText = String((+products[index].price + sizeChecked + additivesCheckedCount * 0.5).toFixed(2));
 }
 
 // getPriceProduct().
