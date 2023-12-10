@@ -261,6 +261,48 @@ input {
     gap: 8px;
 }
 
+/*.tabs__button:hover {*/
+/*    background-color: #665f55;*/
+/*    border-color: #665f55;*/
+/*    animation: hover-tab 350ms;*/
+/*}*/
+
+/*.tabs__button:hover .button__icon {*/
+/*    background-color: #e1d4c9;*/
+/*}*/
+
+/*.tabs__button:hover .button__name {*/
+/*    color: #e1d4c9;*/
+/*}*/
+
+
+.size__btn-box input:checked + .size__btn,
+.additives__btn-box input:checked + .additives__btn {
+    background-color: #665f55;
+    border-color: #665f55;
+    animation: hover-tab 350ms;
+}
+
+.size__btn-box input:checked + label .button__icon,
+.additives__btn-box input:checked + label .button__icon {
+    background-color: #e1d4c9;
+}
+
+.size__btn-box input:checked + label .button__name,
+.additives__btn-box input:checked + label .button__name {
+    color: #e1d4c9;
+}
+
+.size__btn:hover,
+.additives__btn:hover {
+    cursor: pointer;
+}
+
+.size__btn-box input:checked + label:hover,
+.additives__btn-box input:checked + label:hover {
+    cursor: default;
+}
+
 .cost {
     display: flex;
     justify-content: space-between;
