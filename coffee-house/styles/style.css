@@ -127,12 +127,26 @@ a::after {
 }
 
 .main-block__background {
-    max-width: 1360px;
+    width: 100%;
     height: 644px;
     border-radius: 40px;
-    width: 100%;
-    background: lightgray url("../images/img-hero.jpg") no-repeat center;
+    /*width: 100%;*/
+    /*background: lightgray url("../images/img-hero.jpg") no-repeat center;*/
     background-size: cover;
+    position: relative;
+}
+
+.background__video {
+    max-width: 1360px;
+    border-radius: 40px;
+    width: 100%;
+    height: 644px;
+    z-index: -100;
+    object-fit: cover;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
 }
 
 .main-block__offer {
