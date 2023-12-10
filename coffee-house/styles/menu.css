@@ -120,12 +120,14 @@
     flex-direction: column;
     padding: 20px;
     gap: 12px;
+    color: #403F3D;
 }
 
 .cup-card__name,
 .cup-card__cost {
     font-size: 24px;
     line-height: 1.25;
+    font-weight: 600;
 }
 
 .cup-card__cost {
@@ -142,7 +144,7 @@
     overflow: hidden;
     object-fit: cover;
     border-radius: 40px;
-    width: 310px;
+    /*width: 310px;*/
     height: 310px;
 }
 
@@ -273,11 +275,28 @@
     border: 1px solid #403f3d;
 }
 
+.menu__sections {
+    margin-bottom: 40px;
+}
+
+.menu__tea.current ~ .menu__refresh {
+    display: none !important;
+}
+
+/*#refresh {*/
+/*    display: none;*/
+/*}*/
+
+#hidden {
+    display: none;
+}
+
 .menu__refresh {
     display: none;
     border: none;
     background: none;
-    margin: 0 auto;
+    /*margin: 0 auto;*/
+    margin-top: 40px;
 }
 
 .refresh__box {

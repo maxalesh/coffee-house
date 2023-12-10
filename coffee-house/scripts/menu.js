@@ -5,8 +5,9 @@ const tabTeaBtn = document.querySelector(".tab-tea");
 const tabDessertBtn = document.querySelector(".tab-dessert");
 let tabInd = 0;
 const tabsBtn = [tabCoffeeBtn, tabTeaBtn, tabDessertBtn];
-const cupsCards = Array.from(document.querySelector(".menu__container").children);
+const cupsCards = Array.from(document.querySelectorAll(".menu__container .section"));
 const closeButtons = Array.from(document.querySelectorAll(".close__btn"));
+const refreshBtn = document.querySelector('.refresh');
 
 //Modal
 const modalWindow = document.querySelector(".modal");
@@ -37,6 +38,7 @@ let products;
 tabCoffeeBtn.addEventListener("click", () => switchTabs(0));
 tabTeaBtn.addEventListener("click", () => switchTabs(1));
 tabDessertBtn.addEventListener("click", () => switchTabs(2));
+refreshBtn.addEventListener("click", () => showMore(tabInd));
 
 for (let closeButton of closeButtons) {
     closeButton.addEventListener("click", () => closeModal());
@@ -54,6 +56,12 @@ function showUnderline() {
 }
 
 function switchTabs(cupInd = 0) {
+    if (cupInd === 1) {
+        cupsCards[1].classList.add("current");
+    } else {
+        refreshBtn.id = "";
+        cupsCards[1].classList.remove("current");
+        }
     tabInd = cupInd;
     cupsCards.forEach((item, ind) => {
         if (ind === tabInd) {
@@ -68,6 +76,13 @@ function switchTabs(cupInd = 0) {
         }
     });
 }
+
+function showMore(section) {
+    let currentProducts = Array.from(cupsCards[section].children);
+    currentProducts.forEach((card) => card.style.display = "flex");
+    refreshBtn.id = "hidden";
+}
+
 
 function closeModal() {
     modalWindow.style.display = "none";
@@ -173,7 +188,7 @@ async function showProducts(section = "coffee") {
                 <img alt="${products[i].category}-${i+1}" src="images/menu/${products[i].category}-${i+1}.png">
              </div>
             <div class="cup-card__info">
-                <div><h2 class="cup-card__name"></h2>${products[i].name}</div>
+                <div><h2 class="cup-card__name">${products[i].name}</h2></div>
                 <div>
                     <p class="cup-card__description">${products[i].description}</p>
                 </div>

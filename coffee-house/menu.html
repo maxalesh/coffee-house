@@ -2,19 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8"/>
-    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
     <title>Menu</title>
-    <link href="styles/style.css" rel="stylesheet"/>
-    <link href="styles/normalize.css" rel="stylesheet"/>
-    <link href="styles/menu.css" rel="stylesheet"/>
-    <link href="styles/responsive.css" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com" rel="preconnect"/>
-    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="styles/style.css" rel="stylesheet">
+    <link href="styles/normalize.css" rel="stylesheet">
+    <link href="styles/menu.css" rel="stylesheet">
+    <link href="styles/responsive.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
     <link
             href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Manrope:wght@400;700&display=swap"
             rel="stylesheet"
-    />
-    <link href="pictures/logo.svg" rel="icon" type="image/svg+xml"/>
+    >
+    <link href="pictures/logo.svg" rel="icon" type="image/svg+xml">
 </head>
 
 <body class="menu-page__container">
@@ -22,37 +22,23 @@
     <header class="header">
         <div class="header__container">
             <a class="header__logo logo" href="index.html">
-                <img
-                        alt="logo"
-                        class="logo__icon"
-                        src="pictures/logo.svg"
-                />
+                <img alt="logo" class="logo__icon" src="pictures/logo.svg">
                 <span class="logo__text"></span>
             </a>
 
             <nav class="header__nav nav">
                 <ul class="nav__list">
                     <li class="nav__item">
-                        <a class="nav__link" href="index.html#favorite"
-                        >Favorite coffee</a
-                        >
+                        <a class="nav__link" href="index.html#favorite">Favorite coffee</a>
                     </li>
                     <li class="nav__item">
-                        <a class="nav__link" href="index.html#about"
-                        >About</a
-                        >
+                        <a class="nav__link" href="index.html#about">About</a>
                     </li>
                     <li class="nav__item">
-                        <a
-                                class="nav__link"
-                                href="index.html#mobile-app"
-                        >Mobile app</a
-                        >
+                        <a class="nav__link" href="index.html#mobile-app">Mobile app</a>
                     </li>
                     <li class="nav__item">
-                        <a class="nav__link" href="#contact"
-                        >Contact us</a
-                        >
+                        <a class="nav__link" href="#contact">Contact us</a>
                     </li>
                 </ul>
             </nav>
@@ -61,25 +47,15 @@
                 <div class="coffee-menu__item">
                     <a class="coffee-menu__link">
                         <span class="menu__text">Menu</span>
-                        <img
-                                alt="coffee-cup-icon"
-                                class="menu__icon"
-                                src="pictures/coffee-cup.svg"
-                        />
+                        <img alt="coffee-cup-icon" class="menu__icon" src="pictures/coffee-cup.svg">
                     </a>
                 </div>
             </div>
 
             <div class="header__menu-icon">
                 <div class="menu-icon__burger">
-                    <img
-                            alt="menu icon"
-                            src="pictures/header-menu.svg"
-                    />
-                    <img
-                            alt="menu icon"
-                            src="pictures/header-menu.svg"
-                    />
+                    <img alt="menu icon" src="pictures/header-menu.svg">
+                    <img alt="menu icon" src="pictures/header-menu.svg">
                 </div>
             </div>
         </div>
@@ -96,11 +72,7 @@
                 <li>
                     <div class="tabs__item">
                         <button class="tabs__button tab-coffee" data-name="coffee">
-                                    <span class="button__icon"
-                                    ><img
-                                            alt=""
-                                            src="pictures/menu/coffee-icon.svg"
-                                    /></span>
+                            <span class="button__icon"><img alt="" src="pictures/menu/coffee-icon.svg"></span>
                             <span class="button__name">Coffee</span>
                         </button>
                     </div>
@@ -108,11 +80,7 @@
                 <li>
                     <div class="tabs__item">
                         <button class="tabs__button tab-tea" data-name="tea">
-                                    <span class="button__icon"
-                                    ><img
-                                            alt=""
-                                            src="pictures/menu/tea-icon.svg"
-                                    /></span>
+                            <span class="button__icon"><img alt="" src="pictures/menu/tea-icon.svg"></span>
                             <span class="button__name">Tea</span>
                         </button>
                     </div>
@@ -120,11 +88,7 @@
                 <li>
                     <div class="tabs__item">
                         <button class="tabs__button tab-dessert" data-name="dessert">
-                                    <span class="button__icon">
-                                        <img
-                                                alt=""
-                                                src="pictures/menu/dessert-icon.svg"
-                                        /></span>
+                            <span class="button__icon"><img alt="" src="pictures/menu/dessert-icon.svg"></span>
                             <span class="button__name">Dessert</span>
                         </button>
                     </div>
@@ -133,41 +97,36 @@
         </div>
 
         <div class="menu__container">
-            <div class="menu__coffee">
-                <!--                <div class="menu__products"></div>-->
+            <div class="menu__coffee section"></div>
+            <div class="menu__tea section"></div>
+            <div class="menu__dessert section"></div>
+
+            <div class="menu__refresh refresh" id="refresh">
+                <button class="refresh__box">
+                    <svg
+                            fill="none"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            width="24"
+                            xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <g>
+                            <path
+                                    d="M21.8883 13.5C21.1645 18.3113 17.013 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C16.1006 2 19.6248 4.46819 21.1679 8"
+                                    stroke="#403F3D"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                            />
+                            <path
+                                    d="M17 8H21.4C21.7314 8 22 7.73137 22 7.4V3"
+                                    stroke="#403F3D"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                            />
+                        </g>
+                    </svg>
+                </button>
             </div>
-            <div class="menu__tea">
-                <!--                <div class="menu__products"></div>-->
-            </div>
-            <div class="menu__dessert">
-                <!--                <div class="menu__products"></div>-->
-            </div>
-            <!--                    <div class="menu__refresh refresh">-->
-            <!--                        <button class="refresh__box">-->
-            <!--                            <svg-->
-            <!--                                fill="none"-->
-            <!--                                height="24"-->
-            <!--                                viewBox="0 0 24 24"-->
-            <!--                                width="24"-->
-            <!--                                xmlns="http://www.w3.org/2000/svg"-->
-            <!--                            >-->
-            <!--                                <g>-->
-            <!--                                    <path-->
-            <!--                                        d="M21.8883 13.5C21.1645 18.3113 17.013 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C16.1006 2 19.6248 4.46819 21.1679 8"-->
-            <!--                                        stroke="#403F3D"-->
-            <!--                                        stroke-linecap="round"-->
-            <!--                                        stroke-linejoin="round"-->
-            <!--                                    />-->
-            <!--                                    <path-->
-            <!--                                        d="M17 8H21.4C21.7314 8 22 7.73137 22 7.4V3"-->
-            <!--                                        stroke="#403F3D"-->
-            <!--                                        stroke-linecap="round"-->
-            <!--                                        stroke-linejoin="round"-->
-            <!--                                    />-->
-            <!--                                </g>-->
-            <!--                            </svg>-->
-            <!--                        </button>-->
-            <!--                    </div>-->
         </div>
 
         <div class="modal"></div>
@@ -178,11 +137,8 @@
         <div class="footer-container">
             <div class="footer__left-block">
                 <div class="footer__text">
-                    <h2 class="footer__title">
-                        Sip, Savor, Smile.
-                        <span class="_italic-beige"
-                        >It’s coffee time!</span
-                        >
+                    <h2 class="footer__title">Sip, Savor, Smile.
+                        <span class="_italic-beige">It’s coffee time!</span>
                     </h2>
                 </div>
 
@@ -260,42 +216,24 @@
                     <h3 class="contacts__title">Contact us</h3>
                     <div class="contacts__info">
                         <div class="contacts__address contacts__item">
-                            <a
-                                    class="address__text"
-                                    href="https://maps.app.goo.gl/cb2N8uJmRzWKRChz5"
-                                    target="_blank"
-                            >
-                                <img
-                                        alt="address icon"
-                                        class="address__icon contact-icon"
-                                        src="pictures/pin-alt.svg"
-                                />8558 Green Rd., LA
+                            <a class="address__text" href="https://maps.app.goo.gl/cb2N8uJmRzWKRChz5" target="_blank">
+                                <img alt="address icon" class="address__icon contact-icon" src="pictures/pin-alt.svg">
+                                8558 Green Rd., LA
                             </a>
                         </div>
 
                         <div class="contacts__phone contacts__item">
-                            <a
-                                    class="phone__number"
-                                    href="tel:+16035550123"
-                            >
-                                <img
-                                        alt="phone icon"
-                                        class="phone__icon contact-icon"
-                                        src="pictures/phone.svg"
-                                />
+                            <a class="phone__number" href="tel:+16035550123">
+                                <img alt="phone icon" class="phone__icon contact-icon" src="pictures/phone.svg">
                                 +1 (603) 555-0123
                             </a>
                         </div>
 
                         <div class="contacts__clock contacts__item">
-                                    <span class="clock__time-zone">
-                                        <img
-                                                alt="clock icon"
-                                                class="clock__icon contact-icon"
-                                                src="pictures/clock.svg"
-                                        />
+                            <span class="clock__time-zone">
+                                        <img alt="clock icon" class="clock__icon contact-icon" src="pictures/clock.svg">
                                         Mon-Sat: 9:00 AM – 23:00 PM
-                                    </span>
+                            </span>
                         </div>
                     </div>
                 </div>

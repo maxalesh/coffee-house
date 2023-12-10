@@ -5,6 +5,10 @@
 }
 
 @media (max-width: 1439px) {
+    .menu__refresh {
+        display: none;
+    }
+
     .wrapper {
         margin: 0 40px;
     }
@@ -173,9 +177,14 @@
     }
 
     .menu__refresh {
-        display: flex !important;
+        display: flex;
+        justify-content: center;
     }
 
+    /*#refresh {*/
+    /*    display: flex;*/
+    /*    justify-content: center;*/
+    /*}*/
     .menu-page__title br {
         display: none;
     }
