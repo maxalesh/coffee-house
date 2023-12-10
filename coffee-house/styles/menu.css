@@ -301,7 +301,7 @@
         cursor: pointer;
     }
 
-    .tab-coffee:hover {
+    .tabs__button.active:hover {
         cursor: default;
     }
 

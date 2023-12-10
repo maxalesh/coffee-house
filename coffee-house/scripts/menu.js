@@ -57,10 +57,12 @@ function switchTabs(cupInd = 0) {
     tabInd = cupInd;
     cupsCards.forEach((item, ind) => {
         if (ind === tabInd) {
+            tabsBtn[ind].setAttribute('disabled', '');
             showProducts(tabsBtn[ind].dataset.name)
             item.style.display = "flex";
             tabsBtn[ind].classList.add("active");
         } else {
+            tabsBtn[ind].removeAttribute('disabled');
             item.style.display = "none";
             tabsBtn[ind].classList.remove("active");
         }
@@ -148,12 +150,18 @@ modalWindow.innerHTML = `
             </div>
 `;
 
+async function getProductsJSON() {
+        let response = await fetch(jsonURL);
+//         products = await response.json();
+        return (await response.json());
+}
+
 async function showProducts(section = "coffee") {
     let menuSectionEl = document.querySelector(`.menu__${section}`);
     menuSectionEl.innerHTML = '';
-    let response = await fetch(jsonURL);
-    products = await response.json(); // читаем ответ в формате JSON
-    console.log(products);
+//     let response = await fetch(jsonURL);
+//     products = await response.json();
+    products = products || await getProductsJSON();
     let startInd = rangeSections[section].start;
     let endInd = rangeSections[section].end;
     for (let i = startInd; i <= endInd; i++) {
@@ -162,7 +170,7 @@ async function showProducts(section = "coffee") {
         productCard.innerHTML = `
         <div class="menu__cup-card">
              <div class="card__image">
-                <img alt="${products[i].category}-${i+1}" src="images/menu/${products[0].category}-${i+1}.png">
+                <img alt="${products[i].category}-${i+1}" src="images/menu/${products[i].category}-${i+1}.png">
              </div>
             <div class="cup-card__info">
                 <div><h2 class="cup-card__name"></h2>${products[i].name}</div>
