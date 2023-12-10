@@ -6,7 +6,7 @@ const tabDessertBtn = document.querySelector(".tab-dessert");
 let tabInd = 0;
 const tabsBtn = [tabCoffeeBtn, tabTeaBtn, tabDessertBtn];
 const cupsCards = Array.from(document.querySelectorAll(".menu__container .section"));
-const closeButtons = Array.from(document.querySelectorAll(".close__btn"));
+
 const refreshBtn = document.querySelector('.refresh');
 
 //Modal
@@ -39,10 +39,9 @@ tabCoffeeBtn.addEventListener("click", () => switchTabs(0));
 tabTeaBtn.addEventListener("click", () => switchTabs(1));
 tabDessertBtn.addEventListener("click", () => switchTabs(2));
 refreshBtn.addEventListener("click", () => showMore(tabInd));
+// modalWindow.addEventListener("click", () => closeModal());
 
-for (let closeButton of closeButtons) {
-    closeButton.addEventListener("click", () => closeModal());
-}
+
 
 for (let cardFirst of menuCards) {
     cardFirst.addEventListener("click", () => openModal());
@@ -90,11 +89,28 @@ function closeModal() {
     page.style.overflow = "inherit";
 }
 
+
 function openModal() {
-    window.scrollTo(0, 0);
     modalWindow.style.display = "flex";
     overlay.style.display = "table";
     page.style.overflow = "hidden";
+
+    document.addEventListener('click', (e) => {
+      const composed = e.composedPath();
+//       const isOutsideModal = composed.every((el) => el.className !== 'menu__cup-card')
+//                              || composed.some((el) => el.className !== 'modal');
+      const isOutsideModal = composed.every((el) => el.className !== 'modal' && el.className !== 'menu__cup-card');
+
+//       console.log(composed.every((el) => el.className !== 'modal'))
+//       console.log(composed.every((el) => el.className !== 'menu__cup-card'))
+//
+//       console.log(isOutsideModal)
+
+      if (isOutsideModal) {
+        console.log(isOutsideModal)
+        closeModal()
+      }
+    })
 }
 
 showUnderline();
@@ -165,6 +181,11 @@ modalWindow.innerHTML = `
             </div>
 `;
 
+const closeButtons = Array.from(document.querySelectorAll(".close__btn"));
+for (let closeButton of closeButtons) {
+    closeButton.addEventListener("click", () => closeModal());
+}
+
 async function getProductsJSON() {
         let response = await fetch(jsonURL);
 //         products = await response.json();
@@ -183,7 +204,6 @@ async function showProducts(section = "coffee") {
         const productCard = document.createElement("div");
         productCard.classList.add("menu__cup-card");
         productCard.innerHTML = `
-        <div class="menu__cup-card">
              <div class="card__image">
                 <img alt="${products[i].category}-${i+1}" src="images/menu/${products[i].category}-${i+1}.png">
              </div>
@@ -194,7 +214,6 @@ async function showProducts(section = "coffee") {
                 </div>
                 <div><span class="cup-card__cost">$${products[i].price}</span></div>
             </div>
-        </div>
         `;
 
         productCard.addEventListener("click", () => openModal(i));
