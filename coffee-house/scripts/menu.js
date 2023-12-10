@@ -100,10 +100,11 @@ function openModal(i) {
 
 
     modalWindow.innerHTML = `
+
                 <div class="modal__image-box">
                     <img alt="product image" class="modal__image" src="images/menu/${products[i].category}-${i+1}.png">
                 </div>
-
+                    <div>
                 <div class="modal__content">
                     <div class="modal__text">
                         <h2 class="modal__title">${products[i].name}</h2>
@@ -176,6 +177,7 @@ function openModal(i) {
                     <div class="modal__close">
                         <button class="close__btn">Close</button>
                     </div>
+                </div>
                 </div>
     `;
 

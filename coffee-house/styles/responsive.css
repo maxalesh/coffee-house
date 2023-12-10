@@ -55,11 +55,23 @@
         width: auto;
         margin: 0 auto;
     }
+
+    .modal {
+        width: auto;
+    }
 }
 
 @media (max-width: 768px) {
     .wrapper {
         max-width: 688px;
+    }
+
+    .modal {
+        width: 688px;
+    }
+
+    .size__btn-box, .additives__btn-box {
+        flex-wrap: wrap;
     }
 
     .header__nav {
@@ -215,6 +227,10 @@
         margin: 0 20px;
     }
 
+    .modal {
+        width: auto;
+    }
+
     /*.main-block__offer {*/
     /*    margin: 70px 20px;*/
     /*    width: auto;*/
@@ -256,11 +272,25 @@
     .about__title {
         font-size: 4.5rem;
     }
+
+    .modal__image {
+        width: 240px;
+        height: 240px;
+    }
 }
 
 @media (max-width: 550px) {
     .main-block__offer {
         margin: 70px 30px;
+    }
+
+    .modal__image {
+        display: none;
+    }
+
+    .modal {
+        width: 90%;
+        gap: 0;
     }
 
     .coffee-picture {
