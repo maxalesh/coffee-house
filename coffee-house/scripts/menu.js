@@ -41,12 +41,6 @@ tabDessertBtn.addEventListener("click", () => switchTabs(2));
 refreshBtn.addEventListener("click", () => showMore(tabInd));
 // modalWindow.addEventListener("click", () => closeModal());
 
-
-
-for (let cardFirst of menuCards) {
-    cardFirst.addEventListener("click", () => openModal());
-}
-
 function showUnderline() {
     let currentUrl = window.location.href;
     if (currentUrl.split("/").at(-1) === "menu.html") {
@@ -90,101 +84,117 @@ function closeModal() {
 }
 
 
-function openModal() {
+function openModal(i) {
     modalWindow.style.display = "flex";
     overlay.style.display = "table";
     page.style.overflow = "hidden";
 
     document.addEventListener('click', (e) => {
       const composed = e.composedPath();
-//       const isOutsideModal = composed.every((el) => el.className !== 'menu__cup-card')
-//                              || composed.some((el) => el.className !== 'modal');
       const isOutsideModal = composed.every((el) => el.className !== 'modal' && el.className !== 'menu__cup-card');
 
-//       console.log(composed.every((el) => el.className !== 'modal'))
-//       console.log(composed.every((el) => el.className !== 'menu__cup-card'))
-//
-//       console.log(isOutsideModal)
-
       if (isOutsideModal) {
-        console.log(isOutsideModal)
         closeModal()
       }
     })
+
+
+    modalWindow.innerHTML = `
+                <div class="modal__image-box">
+                    <img alt="product image" class="modal__image" src="images/menu/${products[i].category}-${i+1}.png">
+                </div>
+
+                <div class="modal__content">
+                    <div class="modal__text">
+                        <h2 class="modal__title">${products[i].name}</h2>
+                        <p class="modal__description">${products[i].description}</p>
+                    </div>
+
+                    <div class="modal__size size">
+                        <h3 class="size__title">Size</h3>
+                        <div class="size__btn-box">
+                            <input id="size-s" type="radio" name="size" value="${products[i].sizes.s["add-price"]}" checked>
+                            <label for="size-s" class="size__btn tabs__button">
+                                <span class="size__btn-icon button__icon">S</span>
+                                <span class="button__name">${products[i].sizes.s.size}</span>
+                            </label>
+
+                            <input id="size-m" type="radio" name="size" value="${products[i].sizes.m["add-price"]}">
+                            <label for="size-m" class="size__btn tabs__button">
+                                <span class="size__btn-icon button__icon">M</span>
+                                <span class="button__name">${products[i].sizes.m.size}</span>
+                            </label>
+
+
+                            <input id="size-l" type="radio" name="size" value="${products[i].sizes.m["add-price"]}">
+                            <label for="size-l" class="size__btn tabs__button">
+                                <span class="size__btn-icon button__icon">L</span>
+                                <span class="button__name">${products[i].sizes.m.size}</span>
+                             </label>
+                        </div>
+                    </div>
+
+                    <div class="modal__additives additives">
+                        <h3 class="additives__title">Additives</h3>
+                        <div class="additives__btn-box">
+                            <button class="additives__btn tabs__button">
+                                <span class="additives__btn-icon button__icon">1</span>
+                                <span class="button__name">${products[i].additives[0].name}</span>
+                            </button>
+                            <button class="additives__btn tabs__button">
+                                <span class="additives__btn-icon button__icon">2</span>
+                                <span class="button__name">${products[i].additives[1].name}</span>
+                            </button>
+                            <button class="additives__btn tabs__button">
+                                <span class="additives__btn-icon button__icon">3</span>
+                                <span class="button__name">${products[i].additives[2].name}</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="modal__cost cost">
+                        <span class="cost__title">Total:</span>
+                        <div>
+                            <span>$</span>
+                            <span class="cost__value">${products[i].price}</span>
+                        </div>
+                    </div>
+
+                    <div class="modal__note">
+                        <img alt="info-empty" class="note__icon" src="pictures/menu/info-empty.svg">
+                        <p class="note__text">The cost is not final. Download our mobile app to see the final price and
+                            place your order. Earn loyalty points and enjoy your favorite coffee with up to 20%
+                            discount.
+                        </p>
+                    </div>
+
+                    <div class="modal__close">
+                        <button class="close__btn">Close</button>
+                    </div>
+                </div>
+    `;
+
+    const closeButton = document.querySelector(".close__btn");
+    closeButton.addEventListener("click", () => closeModal());
+
+    const sizesBtn = Array.from(document.querySelectorAll('.size__btn-box input'));
+    sizesBtn.forEach((item) => item.addEventListener('click', () => getPriceProduct(i)));
 }
+
+function getPriceProduct(index) {
+    let costValue = document.querySelector('.cost__value');
+    const sizeChecked = +document.querySelector('input[name="size"]:checked').value;
+    costValue.innerText = String((+products[index].price + sizeChecked).toFixed(2));
+}
+
+// getPriceProduct().
 
 showUnderline();
 switchTabs();
 
-modalWindow.innerHTML = `
-            <div class="modal__image-box">
-                <img alt="product image" class="modal__image" src="">
-            </div>
 
-            <div class="modal__content">
-                <div class="modal__text">
-                    <h2 class="modal__title"></h2>
-                    <p class="modal__description"></p>
-                </div>
 
-                <div class="modal__size size">
-                    <h3 class="size__title">Size</h3>
-                    <div class="size__btn-box">
-                        <button class="size__btn tabs__button">
-                            <span class="size__btn-icon button__icon">S</span>
-                            <span class="button__name"></span>
-                        </button>
-                        <button class="size__btn tabs__button"><span class="size__btn-icon button__icon">M</span>
-                            <span class="button__name"></span>
-                        </button>
-                        <button class="size__btn tabs__button"><span class="size__btn-icon button__icon">L</span>
-                            <span class="button__name"></span>
-                        </button>
-                    </div>
 
-                </div>
-
-                <div class="modal__additives additives">
-                    <h3 class="additives__title">Additives</h3>
-                    <div class="additives__btn-box">
-                        <button class="additives__btn tabs__button">
-                            <span class="additives__btn-icon button__icon">1</span>
-                            <span class="button__name"></span>
-                        </button>
-                        <button class="additives__btn tabs__button">
-                            <span class="additives__btn-icon button__icon">2</span>
-                            <span class="button__name"></span>
-                        </button>
-                        <button class="additives__btn tabs__button">
-                            <span class="additives__btn-icon button__icon">3</span>
-                            <span class="button__name"></span>
-                        </button>
-                    </div>
-                </div>
-
-                <div class="modal__cost cost">
-                    <span class="cost__title">Total:</span>
-                    <span class="cost__value"></span>
-                </div>
-
-                <div class="modal__note">
-                    <img alt="info-empty" class="note__icon" src="pictures/menu/info-empty.svg">
-                    <p class="note__text">The cost is not final. Download our mobile app to see the final price and
-                        place your order. Earn loyalty points and enjoy your favorite coffee with up to 20%
-                        discount.
-                    </p>
-                </div>
-
-                <div class="modal__close">
-                    <button class="close__btn">Close</button>
-                </div>
-            </div>
-`;
-
-const closeButtons = Array.from(document.querySelectorAll(".close__btn"));
-for (let closeButton of closeButtons) {
-    closeButton.addEventListener("click", () => closeModal());
-}
 
 async function getProductsJSON() {
         let response = await fetch(jsonURL);

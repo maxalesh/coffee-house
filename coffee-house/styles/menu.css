@@ -173,6 +173,11 @@
     background-color: #e1d4c9;
     border-radius: 40px;
     gap: 20px;
+    box-sizing: border-box;
+}
+
+input {
+    display: none;
 }
 
 .overlay {
