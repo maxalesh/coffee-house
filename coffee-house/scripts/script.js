@@ -6,26 +6,39 @@ const btnNext = document.querySelector(".btn-next");
 const coffeeCount = coffeeImages.length;
 const controlsArray = Array.from(document.querySelectorAll(".controls__item"));
 const main = document.querySelector('main');
-// const burgerLinks = Array.from(document.querySelectorAll('.burger__link'));
-//
-// burgerLinks.forEach((link) => link.addEventListener('click', () => toggleBurgerMenu()))
-
+const coffeeCards = Array.from(document.querySelectorAll('.coffee-card'));
+const coffeeSliderBox = document.querySelector('.coffee-slider');
 btnPrev.addEventListener("click", () => swipeSlide("prev"));
 btnNext.addEventListener("click", () => swipeSlide("next"));
+coffeeSliderBox.onmouseenter = () => {
+    disableAutoSwitch()
+    console.log('onmouseenter')
+}
+
+coffeeSliderBox.onmouseleave = () => {
+    autoSwitch()
+    console.log('onmouseleave')
+};
+
+// coffeeCards.forEach((card) => {
+//     card.onmouseenter = () => {
+//         disableAutoSwitch()
+//         console.log('onmouseenter')
+//     }
+//     card.onmouseleave = () => {
+//         autoSwitch()
+//         console.log('onmouseleave')
+//     }
+// });
+
+
 
 function showNewImages(currentInd = 0) {
+    const imagesWidth = coffeeImages[0].clientWidth;
     coffeeInd = currentInd;
-    coffeeImages.forEach((slide, index) => {
-        if (index === coffeeInd) {
-            slide.style.display = "block";
-            controlsArray[index].classList.add("controls__item-active");
-        } else {
-//             slide.style.display = "none";
-            controlsArray[index].classList.remove("controls__item-active");
-        }
-    });
-//    coffeeInd+=1
-//    setTimeout(swipeSlide("next"), 5000);
+
+    coffeeSlider.style.transform = `translateX(${-imagesWidth * coffeeInd}px)`;
+
 }
 
 showNewImages();
@@ -42,4 +55,19 @@ function swipeSlide(direction) {
         }
     }
 }
+
+    let onAutoSwitch = true;
+
+    function autoSwitch() {
+      if (onAutoSwitch) {
+        onAutoSwitch = setInterval(()=> showNewImages((coffeeInd + 1) % coffeeCount), 1000);
+      }
+    }
+
+    autoSwitch()
+
+    function disableAutoSwitch() {
+      clearInterval(onAutoSwitch);
+//       onAutoSwitch = null;
+    }
 

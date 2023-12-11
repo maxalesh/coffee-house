@@ -239,6 +239,7 @@ a::after {
 
 /*SLIDER*/
 .coffee-slider-box {
+    position: relative;
     margin: 100px 0;
 }
 
@@ -268,7 +269,45 @@ a::after {
 }
 
 .coffee-pictures {
+    /*display: flex;*/
+    /*overflow: hidden;*/
+    /*align-items: center;*/
+    /*justify-content: space-between;*/
+    /*width: 480px;*/
+    /*margin: 0 auto;*/
+    /*transition: all 500ms;*/
+    display: flex;
+    justify-content: flex-start;
+    margin: 0 auto;
     transition: all 500ms;
+}
+
+.coffee-slider {
+    position: relative;
+    z-index: 500;
+    /*justify-content: space-between;*/
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    width: 480px;
+    margin: 0 auto;
+}
+
+.picture-transform {
+    transform: translateX(0px);
+}
+
+.arrows {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    display: flex;
+    width: 100%;
+}
+
+.btn-next {
+    position: absolute;
+    right: 0;
 }
 
 /*@keyframes switch-coffee {*/
@@ -283,15 +322,9 @@ a::after {
     width: 480px;
     height: 480px;
     margin: 0 auto;
+    transition: all 500ms;
+    /*transform: translateX(-589px);*/
     object-fit: cover;
-}
-
-.coffee-slider {
-    display: inline-flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    margin: 40px 0;
 }
 
 .coffee-card__title,
