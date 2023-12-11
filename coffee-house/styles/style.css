@@ -107,18 +107,24 @@ a::after {
     align-items: center;
 }
 
-.coffee-menu__item {
+.coffee-menu__item,
+.burger__item {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 4px;
 }
 
-.coffee-menu__link {
+.coffee-menu__link,
+.burger__link-menu {
     display: flex;
     justify-content: center;
     align-items: flex-start;
     gap: 8px;
+}
+
+.burger__link-menu {
+    gap: 16px;
 }
 
 /*BURGER MENU*/
