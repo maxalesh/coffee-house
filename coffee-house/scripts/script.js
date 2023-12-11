@@ -8,6 +8,7 @@ const controlsArray = Array.from(document.querySelectorAll(".controls__item"));
 const main = document.querySelector('main');
 const coffeeCards = Array.from(document.querySelectorAll('.coffee-card'));
 const coffeeSliderBox = document.querySelector('.coffee-slider');
+
 btnPrev.addEventListener("click", () => swipeSlide("prev"));
 btnNext.addEventListener("click", () => swipeSlide("next"));
 coffeeSliderBox.onmouseenter = () => {
@@ -39,6 +40,13 @@ function showNewImages(currentInd = 0) {
 
     coffeeSlider.style.transform = `translateX(${-imagesWidth * coffeeInd}px)`;
 
+      coffeeImages.forEach((slide, index) => {
+            if (index === coffeeInd) {
+                controlsArray[index].classList.add('controls__item-active');
+            } else {
+                controlsArray[index].classList.remove('controls__item-active')
+            }
+        });
 }
 
 showNewImages();
@@ -56,18 +64,20 @@ function swipeSlide(direction) {
     }
 }
 
-    let onAutoSwitch = true;
+    let onAutoSwitch = null;
 
     function autoSwitch() {
-      if (onAutoSwitch) {
-        onAutoSwitch = setInterval(()=> showNewImages((coffeeInd + 1) % coffeeCount), 1000);
+      clearInterval(onAutoSwitch);
+      if (!onAutoSwitch) {
+        onAutoSwitch = setInterval(()=> showNewImages((coffeeInd + 1) % coffeeCount), 5000);
       }
     }
 
     autoSwitch()
 
     function disableAutoSwitch() {
-      clearInterval(onAutoSwitch);
-//       onAutoSwitch = null;
+        console.log(onAutoSwitch)
+        clearInterval(onAutoSwitch);
+        onAutoSwitch = null;
     }
 

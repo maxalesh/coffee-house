@@ -349,7 +349,8 @@ a::after {
 .coffee-slider__controls {
     display: flex;
     width: fit-content;
-    margin: 0 auto;
+    margin: 40px auto 0 auto;
+    /*margin-top: 40px;*/
     gap: 12px;
 }
 

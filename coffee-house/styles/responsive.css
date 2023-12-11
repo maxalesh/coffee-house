@@ -30,8 +30,8 @@
     /*    scale: none;*/
     /*}*/
     .screens__photo {
-        object-fit: cover;
         width: 100%;
+        object-fit: cover;
     }
 
     .mobile-app__screens,
@@ -70,18 +70,18 @@
     }
 
     .burger {
-        display: flex;
         position: fixed;
+        z-index: 999;
+        left: 768px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
         width: 100%;
         height: 100vh;
         padding: 60px 0;
-        flex-direction: column;
-        align-items: center;
-        gap: 100px;
-        background-color: #E1D4C9;
         transition: 700ms ease-out;
-        left: 768px;
-        z-index: 999;
+        background-color: #E1D4C9;
+        gap: 100px;
     }
 
     .burger__link {
@@ -102,9 +102,9 @@
     /*}*/
     .burger__list {
         display: flex;
+        align-items: center;
         flex-direction: column;
         gap: 60px;
-        align-items: center;
     }
 
     .burger__link::after {
@@ -170,16 +170,15 @@
     }
 
     .coffee-slider__title {
-        width: auto;
         font-size: 60px;
         line-height: 125%;
+        width: auto;
         text-align: center;
     }
 
-    .coffee-slider {
-        margin: 38px 0;
-    }
-
+    /*.coffee-slider {*/
+    /*    margin: 38px 0;*/
+    /*}*/
     .gallery__photo-box-2 {
         display: none;
     }
@@ -276,9 +275,9 @@
     .menu__coffee,
     .menu__tea,
     .menu__dessert {
-        flex-wrap: nowrap;
-        flex-direction: column;
         align-items: center;
+        flex-direction: column;
+        flex-wrap: nowrap;
     }
 
     .main-block__offer {
@@ -311,8 +310,8 @@
     }
 
     .coffee-pictures {
-        margin: 0 auto;
         width: 100%;
+        margin: 0 auto;
     }
 
     .coffee-card__info {
@@ -405,8 +404,8 @@
     }
 
     .main-block__offer {
-        margin: 60px 16px;
         width: fit-content;
+        margin: 60px 16px;
     }
 
     .main-block__background {
