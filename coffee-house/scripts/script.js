@@ -20,10 +20,12 @@ function showNewImages(currentInd = 0) {
             slide.style.display = "block";
             controlsArray[index].classList.add("controls__item-active");
         } else {
-            slide.style.display = "none";
+//             slide.style.display = "none";
             controlsArray[index].classList.remove("controls__item-active");
         }
     });
+//    coffeeInd+=1
+//    setTimeout(swipeSlide("next"), 5000);
 }
 
 showNewImages();
@@ -40,3 +42,4 @@ function swipeSlide(direction) {
         }
     }
 }
+
