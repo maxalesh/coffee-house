@@ -5,9 +5,13 @@ const btnPrev = document.querySelector(".btn-prev");
 const btnNext = document.querySelector(".btn-next");
 const coffeeCount = coffeeImages.length;
 const controlsArray = Array.from(document.querySelectorAll(".controls__item"));
+const burgerBtn = document.querySelector('.header__menu-icon');
+const burgerMenu = document.querySelector('.burger');
+const main = document.querySelector('main');
 
 btnPrev.addEventListener("click", () => swipeSlide("prev"));
 btnNext.addEventListener("click", () => swipeSlide("next"));
+burgerBtn.addEventListener("click", () => toggleBurgerMenu());
 
 function showNewImages(currentInd = 0) {
     coffeeInd = currentInd;
@@ -35,4 +39,19 @@ function swipeSlide(direction) {
             break;
         }
     }
+}
+
+function toggleBurgerMenuIcon() {
+    document.querySelector('.header__menu-icon img:nth-child(1)').classList.toggle('burger-line1-open');
+    document.querySelector('.header__menu-icon img:nth-child(2)').classList.toggle('burger-line2-open');
+}
+
+function toggleBurgerMenu() {
+    window.scrollTo(0, 0);
+    toggleBurgerMenuIcon();
+    console.log('ok');
+    document.querySelector('html').classList.toggle('overflow-hidden');
+    burgerMenu.classList.toggle('burger-show');
+//     let hiddenMain = () => main.classList.toggle('visibility-hidden');
+//     setTimeout(main.classList.toggle('visibility-hidden'), 500);
 }
