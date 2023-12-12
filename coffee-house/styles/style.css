@@ -128,6 +128,7 @@ a::after {
 /*BURGER MENU*/
 .burger {
     display: none;
+    will-change: transform;
 }
 
 /*MAIN BLOCK*/
@@ -241,6 +242,7 @@ a::after {
 .coffee-slider-box {
     position: relative;
     margin: 100px 0;
+    user-select: none;
 }
 
 .coffee-slider__title {
@@ -280,6 +282,7 @@ a::after {
     justify-content: flex-start;
     margin: 0 auto;
     transition: all 500ms;
+    will-change: transform;
 }
 
 .coffee-slider {
@@ -294,7 +297,7 @@ a::after {
 }
 
 .picture-transform {
-    transform: translateX(0px);
+    transform: translate3d(0, 0, 0);
 }
 
 .arrows {
@@ -310,20 +313,12 @@ a::after {
     right: 0;
 }
 
-/*@keyframes switch-coffee {*/
-/*    from {*/
-/*        opacity: 0;*/
-/*    }*/
-/*    to {*/
-/*        opacity: 1;*/
-/*    }*/
-/*}*/
 .coffee-picture {
     width: 480px;
     height: 480px;
     margin: 0 auto;
     transition: all 500ms;
-    /*transform: translateX(-589px);*/
+    pointer-events: none;
     object-fit: cover;
 }
 
