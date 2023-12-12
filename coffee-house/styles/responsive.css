@@ -117,7 +117,7 @@
     }
 
     .burger-line2-open {
-        transform: translate(-2px, -12px) rotate(-45deg);
+        transform: translate(-2px, -11px) rotate(-45deg);
         transform-origin: right bottom;
     }
 

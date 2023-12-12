@@ -8,8 +8,8 @@ burgerBtn.addEventListener("click", () => toggleBurgerMenu());
 burgerLinks.forEach((link) => link.addEventListener('click', () => toggleBurgerMenu()))
 
 function toggleBurgerMenuIcon() {
-    document.querySelector('.header__menu-icon img:nth-child(1)').classList.toggle('burger-line1-open');
-    document.querySelector('.header__menu-icon img:nth-child(2)').classList.toggle('burger-line2-open');
+    document.querySelector('.header__menu-icon span:nth-child(1)').classList.toggle('burger-line1-open');
+    document.querySelector('.header__menu-icon span:nth-child(2)').classList.toggle('burger-line2-open');
 }
 
 function toggleBurgerMenu() {

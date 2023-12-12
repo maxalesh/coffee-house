@@ -45,11 +45,13 @@ a::after {
     height: 60px;
 }
 
-/*.burger__line {*/
-/*    width: 16px;*/
-/*    height: 2px;*/
-/*    background-color: #403F3D;*/
-/*}*/
+.burger__line {
+    width: 16px;
+    height: 1px;
+    transition: all 500ms;
+    background-color: #403F3D;
+}
+
 .header__menu-icon {
     display: none;
     align-items: center;
