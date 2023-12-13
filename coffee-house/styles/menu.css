@@ -311,6 +311,7 @@ input {
 .close__btn {
     width: 100%;
     padding: 10px 78px;
+    transition: all 500ms;
     border: 1px solid #403f3d;
     border-radius: 100px;
     background-color: #e1d4c9;
@@ -384,6 +385,12 @@ input {
 
     .menu__cup-card:hover img {
         transform: scale(0.95);
+    }
+
+    .modal__close:hover .close__btn {
+        color: #e1d4c9;
+        border-color: #665f55;
+        background-color: #665f55;
     }
 }
 
