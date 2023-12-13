@@ -360,13 +360,21 @@
         gap: 0;
     }
 
-    .coffee-picture {
-        width: 100%;
-        height: 100%;
-    }
-
+    /*.coffee-picture {*/
+    /*    width: 100%;*/
+    /*    height: 100%;*/
+    /*}*/
     .mobile-app__title {
         font-size: 4rem;
+    }
+
+    .coffee-picture {
+        width: 348px;
+        height: 348px;
+    }
+
+    .coffee-slider {
+        width: 348px;
     }
 }
 
