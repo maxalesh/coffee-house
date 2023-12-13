@@ -45,11 +45,13 @@ a::after {
     height: 60px;
 }
 
-/*.burger__line {*/
-/*    width: 16px;*/
-/*    height: 2px;*/
-/*    background-color: #403F3D;*/
-/*}*/
+.burger__line {
+    width: 16px;
+    height: 1px;
+    transition: all 500ms;
+    background-color: #403F3D;
+}
+
 .header__menu-icon {
     display: none;
     align-items: center;
@@ -128,6 +130,7 @@ a::after {
 /*BURGER MENU*/
 .burger {
     display: none;
+    will-change: transform;
 }
 
 /*MAIN BLOCK*/
@@ -241,6 +244,7 @@ a::after {
 .coffee-slider-box {
     position: relative;
     margin: 100px 0;
+    user-select: none;
 }
 
 .coffee-slider__title {
@@ -280,6 +284,7 @@ a::after {
     justify-content: flex-start;
     margin: 0 auto;
     transition: all 500ms;
+    will-change: transform;
 }
 
 .coffee-slider {
@@ -294,7 +299,49 @@ a::after {
 }
 
 .picture-transform {
-    transform: translateX(0px);
+    transform: translate3d(0, 0, 0);
+}
+
+.coffee-slider__controls {
+    display: flex;
+    width: fit-content;
+    margin: 40px auto 0 auto;
+    /*margin-top: 40px;*/
+    gap: 12px;
+}
+
+.controls__item {
+    width: 38px;
+    height: 4px;
+    border-radius: 100px;
+    /*border: 2px solid #c1b6ad;*/
+    background-color: #C1B6AD;
+}
+
+.controls__item-active {
+    animation: fill-control 2s linear;
+    animation-play-state: running;
+    background-color: #665f55;
+}
+
+.control__progress {
+    width: 0;
+    height: 100%;
+    border-radius: 100px;
+    background-color: #403f3d;
+}
+
+.control__progress.slider-hover {
+    animation-play-state: paused !important;
+}
+
+@keyframes fill-control {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
 }
 
 .arrows {
@@ -310,20 +357,12 @@ a::after {
     right: 0;
 }
 
-/*@keyframes switch-coffee {*/
-/*    from {*/
-/*        opacity: 0;*/
-/*    }*/
-/*    to {*/
-/*        opacity: 1;*/
-/*    }*/
-/*}*/
 .coffee-picture {
     width: 480px;
     height: 480px;
     margin: 0 auto;
     transition: all 500ms;
-    /*transform: translateX(-589px);*/
+    pointer-events: none;
     object-fit: cover;
 }
 
@@ -344,27 +383,6 @@ a::after {
     width: 480px;
     margin-top: 20px;
     text-align: center;
-}
-
-.coffee-slider__controls {
-    display: flex;
-    width: fit-content;
-    margin: 40px auto 0 auto;
-    /*margin-top: 40px;*/
-    gap: 12px;
-}
-
-.controls__item {
-    width: 38px;
-    /*height: 4px;*/
-    color: #c1b6ad;
-    border: 2px solid #c1b6ad;
-    border-radius: 100px;
-}
-
-.controls__item-active {
-    color: #665f55;
-    border: 2px solid #665f55;
 }
 
 /*ABOUT*/
