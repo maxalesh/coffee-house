@@ -6,44 +6,41 @@
 }
 
 /*.menu-page {*/
-
 /*}*/
-
 .menu-page__title {
     font-size: 6rem;
     line-height: 1.25;
-    color: #403f3d;
     width: fit-content;
     margin: 0 auto 40px;
     text-align: center;
+    color: #403f3d;
 }
 
 .button__icon {
-    border-radius: 100px;
-    background-color: #c1b6ad;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    font-size: 16px;
     line-height: 1.5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 30px;
     height: 30px;
-    font-size: 16px;
+    border-radius: 100px;
+    background-color: #c1b6ad;
 }
 
 .tabs__button {
-    border-radius: 100px;
-    display: flex;
-    gap: 8px;
-    padding: 8px 16px 8px 8px;
-    align-items: center;
-    background: inherit;
-    border: 1px solid #c1b6ad;
-
     font-family: Inter, serif;
-    color: #403f3d;
     font-size: 16px;
     font-weight: 600;
     line-height: 1.5;
+    display: flex;
+    align-items: center;
+    padding: 8px 16px 8px 8px;
+    color: #403f3d;
+    border: 1px solid #c1b6ad;
+    border-radius: 100px;
+    background: inherit;
+    gap: 8px;
 }
 
 @keyframes hover-tab {
@@ -64,7 +61,6 @@
 }
 
 /*MENU-CUP*/
-
 .menu__container {
     margin-bottom: 100px;
 }
@@ -73,12 +69,12 @@
 .menu__tea,
 .menu__dessert {
     display: flex;
-    flex-wrap: wrap;
-    gap: 40px;
-    animation: showMenu 450ms ease-in-out;
-    justify-content: center;
-    align-items: center;
     align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    animation: showMenu 450ms ease-in-out;
+    gap: 40px;
 }
 
 @keyframes showMenu {
@@ -99,14 +95,14 @@
 }
 
 .menu__cup-card {
-    display: flex;
     position: relative;
+    display: flex;
     flex-direction: column;
+    box-sizing: border-box;
     width: 310px;
     height: 506px;
-    border-radius: 40px;
     border: 1px solid #c1b6ad;
-    box-sizing: border-box;
+    border-radius: 40px;
 }
 
 .menu__cup-card img {
@@ -119,15 +115,15 @@
     display: flex;
     flex-direction: column;
     padding: 20px;
-    gap: 12px;
     color: #403F3D;
+    gap: 12px;
 }
 
 .cup-card__name,
 .cup-card__cost {
     font-size: 24px;
-    line-height: 1.25;
     font-weight: 600;
+    line-height: 1.25;
 }
 
 .cup-card__cost {
@@ -142,15 +138,15 @@
 .card__image {
     display: inline-block;
     overflow: hidden;
-    object-fit: cover;
+    height: 310px;
     border-radius: 40px;
     /*width: 310px;*/
-    height: 310px;
+    object-fit: cover;
 }
 
 .card__image img {
-    transition: 400ms ease;
     display: block;
+    transition: 400ms ease;
     border-radius: 40px;
     object-fit: cover;
     scale: 1.1;
@@ -158,22 +154,21 @@
 
 /*MODAL*/
 .modal {
-    display: none;
     position: fixed;
-    left: 50%;
+    z-index: 1000;
     top: 50%;
-    width: 800px;
-    height: auto;
-    transform: translate(-50%, -50%);
-    padding: 16px;
-
+    left: 50%;
+    display: none;
     align-items: flex-start;
     align-self: stretch;
-    z-index: 1000;
-    background-color: #e1d4c9;
-    border-radius: 40px;
-    gap: 20px;
     box-sizing: border-box;
+    width: 800px;
+    height: auto;
+    padding: 16px;
+    transform: translate(-50%, -50%);
+    border-radius: 40px;
+    background-color: #e1d4c9;
+    gap: 20px;
 }
 
 input {
@@ -181,16 +176,16 @@ input {
 }
 
 .overlay {
-    display: none;
     position: absolute;
-    width: 100%;
-    height: 500vh;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
     z-index: 999;
-    background-color: rgba(64, 63, 61, 0.8);
+    top: 50%;
+    left: 50%;
+    display: none;
     overflow: hidden;
+    width: 100%;
+    height: 1500vh;
+    transform: translate(-50%, -50%);
+    background-color: rgba(64, 63, 61, 0.8);
 }
 
 .modal__image-box {
@@ -198,20 +193,20 @@ input {
 }
 
 .modal__image {
-    border-radius: 40px;
     width: 310px;
     height: 310px;
+    border-radius: 40px;
 }
 
 .modal__content {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
     font-size: 16px;
     font-weight: 600;
     line-height: 1.5;
+    display: flex;
     flex: 1 1 0;
+    flex-direction: column;
     color: #403f3d;
+    gap: 20px;
 }
 
 .modal__title {
@@ -237,14 +232,15 @@ input {
 .close__btn {
     font-family: Inter, serif;
     font-size: 16px;
-    font-style: normal;
     font-weight: 600;
+    font-style: normal;
     line-height: 150%;
     color: #403f3d;
 }
 
 .additives__title,
 .size__title {
+    font-size: 1.6rem;
     font-weight: 400;
 }
 
@@ -266,21 +262,17 @@ input {
 /*    border-color: #665f55;*/
 /*    animation: hover-tab 350ms;*/
 /*}*/
-
 /*.tabs__button:hover .button__icon {*/
 /*    background-color: #e1d4c9;*/
 /*}*/
-
 /*.tabs__button:hover .button__name {*/
 /*    color: #e1d4c9;*/
 /*}*/
-
-
 .size__btn-box input:checked + .size__btn,
 .additives__btn-box input:checked + .additives__btn {
-    background-color: #665f55;
-    border-color: #665f55;
     animation: hover-tab 350ms;
+    border-color: #665f55;
+    background-color: #665f55;
 }
 
 .size__btn-box input:checked + label .button__icon,
@@ -310,16 +302,18 @@ input {
 
 .modal__note {
     display: flex;
-    gap: 8px;
     align-items: flex-start;
+    padding: 12px 0 12px;
+    border-top: 1px solid #C1B6AD;
+    gap: 8px;
 }
 
 .close__btn {
     width: 100%;
     padding: 10px 78px;
+    border: 1px solid #403f3d;
     border-radius: 100px;
     background-color: #e1d4c9;
-    border: 1px solid #403f3d;
 }
 
 .menu__sections {
@@ -333,29 +327,28 @@ input {
 /*#refresh {*/
 /*    display: none;*/
 /*}*/
-
 #hidden {
     display: none;
 }
 
 .menu__refresh {
     display: none;
-    border: none;
-    background: none;
-    /*margin: 0 auto;*/
     margin-top: 40px;
+    border: none;
+    /*margin: 0 auto;*/
+    background: none;
 }
 
 .refresh__box {
     display: flex;
+    align-items: center;
+    justify-content: center;
     width: 60px;
     height: 60px;
-    justify-content: center;
-    align-items: center;
-    border-radius: 100px;
-    border: 1px solid #665f55;
-    background-color: #e1d4c9;
     transition: background-color 300ms;
+    border: 1px solid #665f55;
+    border-radius: 100px;
+    background-color: #e1d4c9;
 }
 
 @media (hover: hover) {
@@ -372,9 +365,9 @@ input {
     }
 
     .tabs__button:hover {
-        background-color: #665f55;
-        border-color: #665f55;
         animation: hover-tab 350ms;
+        border-color: #665f55;
+        background-color: #665f55;
     }
 
     .tabs__button:hover .button__icon {
@@ -403,7 +396,7 @@ input {
 }
 
 .tabs__button.active {
-    background-color: #665f55;
-    border-color: #665f55;
     animation: hover-tab 350ms;
+    border-color: #665f55;
+    background-color: #665f55;
 }
