@@ -319,7 +319,7 @@ a::after {
 }
 
 .controls__item-active {
-    animation: fill-control 2s linear;
+    animation: fill-control 5s linear;
     animation-play-state: running;
     background-color: #665f55;
 }
