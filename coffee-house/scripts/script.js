@@ -5,8 +5,8 @@ const btnNext = document.querySelector('.btn-next');
 const coffeeCount = coffeeImages.length;
 const controlsArray = Array.from(document.querySelectorAll('.control__progress'));
 const coffeeSliderBox = document.querySelector('.coffee-slider');
-const imageWidth = coffeeImages[0].clientWidth;
 
+let imageWidth = coffeeImages[0].clientWidth;
 let xStart = 0;
 let xEnd = 0;
 let coffeeInd = 0;
@@ -14,7 +14,6 @@ let xInit = 0;
 // const main = document.querySelector('main');
 // const coffeeCards = Array.from(document.querySelectorAll('.coffee-card'));
 let xFinal = 0;
-let valueAfter = 0.33 * imageWidth;
 
 btnPrev.addEventListener('click', () => swipeSlide('prev'));
 btnNext.addEventListener('click', () => swipeSlide('next'));
@@ -49,6 +48,7 @@ window.addEventListener('keydown', function (event) {
 
 function showNewImages() {
     coffeeSlider.style.transition = 'transform .5s';
+    imageWidth = coffeeImages[0].clientWidth;
     coffeeSlider.style.transform = `translate3d(${-imageWidth * coffeeInd}px, 0, 0)`;
 
     coffeeImages.forEach((slide, index) => {
@@ -101,6 +101,7 @@ function swipeStart() {
 }
 
 function swipeEnd() {
+    let valueAfter = 0.33 * imageWidth;
     document.querySelector('.controls__item-active').classList.remove('slider-hover');
     xFinal = xInit - xStart;
     document.removeEventListener('touchend', swipeEnd);
